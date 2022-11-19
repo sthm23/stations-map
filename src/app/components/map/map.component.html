@@ -1,0 +1,9 @@
+<div class="map-wrapper" >
+  <div id="map"  >
+  </div>
+  <app-show-station-form (onShowForm)="showUpdateFormFunc($event)" *ngIf="showUpdateForm" class="add-form" cdkDragBoundary=".map-wrapper" cdkDrag></app-show-station-form>
+  <app-add-form (onAddFormShow)="showAddFormFunc($event)" *ngIf="showAddForm" class="add-form" cdkDragBoundary=".map-wrapper" cdkDrag></app-add-form>
+
+</div>
+
+<app-filter (onRegionFilter)="filterRegion($event)"></app-filter>

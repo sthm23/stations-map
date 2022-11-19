@@ -1,0 +1,11 @@
+.regions-block{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-body{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

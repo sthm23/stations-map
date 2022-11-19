@@ -1,0 +1,13 @@
+<header class="header">
+  <div class="logo" [routerLink]="['main']">TelecomStations</div>
+  <nav>
+      <ul>
+          <li class="station-map" [routerLink]="['main']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Main Page</li>
+          <li class="station-list" [routerLink]="['statistic']" routerLinkActive="active" >Statistic Page</li>
+      </ul>
+  </nav>
+  <div class="search">
+    <input type="text" placeholder="Station cordinate">
+    <button type="button" class="serach-btn">s</button>
+  </div>
+</header>

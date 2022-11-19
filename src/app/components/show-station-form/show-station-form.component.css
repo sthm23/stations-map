@@ -1,0 +1,170 @@
+form{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+h5{
+  margin: 17px;
+}
+input{
+  border: 1px solid grey;
+  height: 18px;
+  border-radius: 3px;
+  font-family: 'Poppins', sans-serif;
+  margin: 5px;
+}
+button{
+  width: 15px;
+  height: 15px;
+  border-radius: 12px;
+  border: 2px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  cursor: pointer;
+}
+.submit, .remove{
+  width: 120px;
+  height: 32px;
+}
+
+.submit:hover{
+  background-color: #105a00;
+  transition: 0.4s all;
+}
+.remove:hover{
+background-color: #8e1111;
+transition: 0.4s all;
+}
+.remove{
+  background-color: rgb(222, 19, 19);
+  border: 2px solid rgb(93, 17, 17);
+  color: aliceblue;
+  transition: 0.4s all;
+}
+.submit{
+  background-color: rgb(40, 162, 38);
+  border: 2px solid green;
+  color: aliceblue;
+  transition: 0.4s all;
+}
+
+.add-btn{
+  width: 70px;
+  height: 20px;
+  font-size: 12px;
+  align-self: flex-end;
+
+}
+.remove-btn{
+  font-size: 20px;
+  width: 18px;
+  height: 18px;
+  background-color: #8e1111;
+  color: rgb(255, 255, 255);
+}
+.close{
+  width: 20px;
+  height: 20px;
+}
+.close:hover{
+  background-color: #a6a6a7;
+}
+form {
+  border: 1px solid whitesmoke;
+  padding: 14px;
+  background: linear-gradient(180deg, #558FEE 0%, #3CB3F1 100%);
+  border-radius: 9px;
+  /* margin: 0 auto; */
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.form-header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.form-station-name-block, .form-station-adress-block, .form-station-status-block, .form-station-cabel-block_number, .form-station-cabel-block_amount,
+.form-station-location-block, .form-station-cabel-block, .form-station-atc-block{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-station-atc-block-parent{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.atc-temp-block{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h5{
+  flex-grow: 1;
+  margin: 5px;
+}
+.add-block{
+  display: flex;
+  align-items: center;
+}
+.check-status{
+  display: flex;
+  align-items: center;
+}
+label {
+  cursor: pointer;
+}
+#cordinat-x, #cordinat-y{
+  width: 70px;
+  display: inline;
+}
+#cabel, #amount-cabel{
+  width: 100px;
+}
+.number-cabel{
+  width: 8%;
+}
+#atc{
+  width: 145px;
+}
+
+
+.btn-block{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.kabel-detal {
+font-size: 80%;
+}
+
+input.ng-valid.ng-touched{
+  border: 2px solid green;
+  box-sizing: border-box;
+}
+
+input.ng-invalid.ng-touched{
+  border: 2px solid red;
+  box-sizing: border-box;
+}

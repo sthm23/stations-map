@@ -1,0 +1,72 @@
+<form [formGroup]="form" (ngSubmit)="FormService.submit()" #formInfo >
+  <div class="form-header">
+    <h2 class="title">Добавить данные:</h2>
+    <button type="button" class="close" (click)="closeForm()" appMapClick>&times;</button>
+  </div>
+  <div class="form-body">
+    <div class="form-station-name-block">
+      <h5>Stansiya bog'lama nomi:</h5>
+      <input type="text" id="town" placeholder="Expamle_RUT" formControlName="town">
+    </div>
+
+    <div class="form-station-adress-block">
+      <h5>Stansiya manzili</h5>
+      <input type="text" formControlName="adress">
+    </div>
+
+    <div class="form-station-status-block">
+      <h5>Stansiya holati:</h5>
+      <div class="check-status">
+        <label for="status-yes">Работает
+        <input type="radio" name="status" id="status-yes" checked >
+        </label>
+        <label for="status-not">Не работает
+        <input type="radio" name="status" id="status-not">
+        </label>
+
+      </div>
+    </div>
+
+    <div class="form-station-location-block">
+      <h5>Stansiya kordinatasi:</h5>
+      <div formGroupName="location">
+        <input type="text" id="cordinat-x" placeholder="00.0000" formControlName="lang">
+        <input type="text" id="cordinat-y" placeholder="00.0000" formControlName="lat">
+      </div>
+    </div>
+
+    <div formGroupName="cabel">
+      <div class="form-station-cabel-block">
+        <h5>Stansiyadagi optovolokno kabel:</h5>
+        <input type="number" id="cabel" placeholder="2323" formControlName="length"><span>km</span>
+      </div>
+
+      <div class="form-station-cabel-block_amount">
+        <h5>Stansiyadagi optovolokno kabel soni:</h5>
+        <input type="number" id="amount-cabel" placeholder="15" formControlName="amount"><span>шт</span>
+      </div>
+
+      <div class="form-station-cabel-block_number">
+        <h5>Kabel detallari:</h5>
+        <span class="kabel-detal">Свободно:</span><input  class="number-cabel" type="number" id="empty" placeholder="5" formControlName="empty">
+        <span class="kabel-detal">Занято:</span><input class="number-cabel" type="number" id="busy" placeholder="6" formControlName="busy">
+    </div>
+    </div>
+
+    <div  class="form-station-atc-block-parent" formGroupName="atc">
+      <button class="add-btn" type="button" (click)="FormService.addAtc()">add atc</button>
+      <div class="atc-temp-block" *ngFor="let item of FormService.formAtc; let ind = index">
+        <h5 class="atc-name">Stansiyadagi qurilma nomi:</h5>
+        <div class="add-block">
+            <input type="text" placeholder="Example ATC" [formControlName]="ind">
+            <button class="remove-btn" type="button" (click)="FormService.removeAtc(ind)">-</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="btn-block">
+    <button type="submit" class="submit">обновить</button>
+    <button type="button" class="remove" (click)="FormService.removeStation()">Удалить</button>
+  </div>
+</form>
