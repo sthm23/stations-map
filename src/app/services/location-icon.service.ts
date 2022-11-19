@@ -24,12 +24,7 @@ export class LocationIconService {
   }
 
   addLocation(option: IAtcData) {
-    const headers = new HttpHeaders({
-      method: 'POST',
-      body: JSON.stringify(option),
-      'Content-Type': 'application/json'
-    })
-    return this.http.post<IAtcData>(this.url, {headers})
+    return this.http.post<IAtcData>(this.url, option)
       .pipe(
         catchError(err => {
         console.log(err);

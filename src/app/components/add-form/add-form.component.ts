@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { IAtcData } from 'src/app/models/interfaces';
 import { LocationIconService } from 'src/app/services/location-icon.service';
+import { MapComponent } from '../map/map.component';
 
 @Component({
   selector: 'app-add-form',
@@ -17,7 +18,7 @@ export class AddFormComponent implements OnInit, OnChanges {
   clickedIconId = '';
   station!:IAtcData;
 
-  constructor(private requestApi: LocationIconService,) {}
+  constructor(private requestApi: LocationIconService, private mapComp: MapComponent) {}
 
   ngOnChanges(changes: SimpleChanges): void {
     const {location} = changes;
@@ -31,10 +32,6 @@ export class AddFormComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-    // const {lat, lon} = this.location
-    // console.log(this.location);
-
-
 
     this.form = new FormGroup({
       town: new FormControl('', [Validators.required]),
@@ -88,11 +85,19 @@ export class AddFormComponent implements OnInit, OnChanges {
       address: this.station.address,
       location: this.station.location,
     }
-    // console.log(this.form);
-    console.log(formData);
+
     this.requestApi.addLocation(formData)
       .subscribe(s=> {
-        console.log(s);
+        if(s._id){
+          const id = s['_id'];
+          const station:any = this.mapComp.pastMarker(s, this.mapComp.map);
+          station['_icon'].setAttribute('id', id);
+          this.mapComp.markersObj[id] = station as any;
+          this.form.reset();
+          this.closeForm();
+        }else {
+          console.log(s);
+        }
       })
   }
 
