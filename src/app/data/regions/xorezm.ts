@@ -857,7 +857,7 @@ export const xorezm =   {
     },
     "regions": [
         {
-            "id": 90_1,
+            "id": 1,
             "region_name": "Ургенч",
             "type": 'shaxar',
             "map_in": {
@@ -1461,11 +1461,11 @@ export const xorezm =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
         {
-            "id": 90_2,
+            "id": 2,
             "region_name": "Хива",
             "type": 'shaxar',
             "map_in": {
@@ -1837,11 +1837,11 @@ export const xorezm =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
         {
-            "id": 90_3,
+            "id": 3,
             "region_name": "Багат",
             "type": 'region',
             "map_in": {
@@ -2437,11 +2437,11 @@ export const xorezm =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
         {
-            "id": 90_4,
+            "id": 4,
             "region_name": "Гурлен",
             "type": 'region',
             "map_in": {
@@ -2885,11 +2885,11 @@ export const xorezm =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
         {
-            "id": 90_5,
+            "id": 5,
             "region_name": "Кошкупыр",
             "type": 'region',
             "map_in": {
@@ -3525,11 +3525,11 @@ export const xorezm =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
         {
-            "id": 90_6,
+            "id": 6,
             "region_name": "Ургенч",
             "type": 'region',
             "map_in": {
@@ -4611,11 +4611,11 @@ export const xorezm =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
         {
-            "id": 90_7,
+            "id": 7,
             "region_name": "Хазарасп",
             "type": 'region',
             "map_in": {
@@ -5183,11 +5183,11 @@ export const xorezm =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
         {
-            "id": 90_8,
+            "id": 8,
             "region_name": "Ханкин",
             "type": 'region',
             "map_in": {
@@ -5747,11 +5747,11 @@ export const xorezm =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
         {
-            "id": 90_9,
+            "id": 9,
             "region_name": "Хива",
             "type": 'region',
             "map_in": {
@@ -6533,11 +6533,11 @@ export const xorezm =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
         {
-            "id": 90_10,
+            "id": 10,
             "region_name": "Шават",
             "type": 'region',
             "map_in": {
@@ -6981,11 +6981,11 @@ export const xorezm =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
         {
-            "id": 90_11,
+            "id": 11,
             "region_name": "Янгиарык",
             "type": 'region',
             "map_in": {
@@ -7441,11 +7441,11 @@ export const xorezm =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
         {
-            "id": 90_12,
+            "id": 12,
             "region_name": "Янгибазар",
             "type": 'region',
             "map_in": {
@@ -8073,11 +8073,11 @@ export const xorezm =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
         {
-            "id": 90_13,
+            "id": 13,
             "region_name": "Питнак",
             "type": 'region',
             "map_in": {
@@ -8221,9 +8221,9 @@ export const xorezm =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
-        
+
     ]
 }

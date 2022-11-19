@@ -6,7 +6,9 @@ import { DragDropModule  } from '@angular/cdk/drag-drop';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
-
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,7 +44,10 @@ import { FilterComponent } from './components/filter/filter.component';
     BrowserModule,
     AppRoutingModule,
     MatSliderModule,
+    MatIconModule,
+    MatButtonToggleModule,
     DragDropModule,
+    MatSidenavModule,
     MatSelectModule,
     MatButtonModule,
     MatCheckboxModule,

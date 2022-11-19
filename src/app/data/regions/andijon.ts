@@ -1781,7 +1781,7 @@ export const andijon = {
   },
   "regions": [
     {
-      "id": 60_1,
+      "id": 1,
       "region_name": "andijon",
       "type": 'shaxar',
       "map_in": {
@@ -2690,7 +2690,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_2,
+      "id": 2,
       "region_name": "andijon",
       "type": 'tumani',
       "map_in": {
@@ -4103,7 +4103,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_3,
+      "id": 3,
       "region_name": "asaka",
       "type": 'tumani',
       "map_in": {
@@ -5216,7 +5216,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_4,
+      "id": 4,
       "region_name": "jalaquduq",
       "type": 'tumani',
       "map_in": {
@@ -6101,7 +6101,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_5,
+      "id": 5,
       "region_name": "qorgontepa",
       "type": 'tumani',
       "map_in": {
@@ -7046,7 +7046,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_6,
+      "id": 6,
       "region_name": "marxamat",
       "type": 'tumani',
       "map_in": {
@@ -7923,7 +7923,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_7,
+      "id": 7,
       "region_name": "izbosgan",
       "type": 'tumani',
       "map_in": {
@@ -9040,7 +9040,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_8,
+      "id": 8,
       "region_name": "paxta-obod",
       "type": 'tumani',
       "map_in": {
@@ -10177,7 +10177,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_9,
+      "id": 9,
       "region_name": "xodji-obod",
       "type": 'tumani',
       "map_in": {
@@ -11214,7 +11214,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_10,
+      "id": 10,
       "region_name": "shaxrixon",
       "type": 'tumani',
       "map_in": {
@@ -12183,7 +12183,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_11,
+      "id": 11,
       "region_name": "oltinkul",
       "type": 'tumani',
       "map_in": {
@@ -13312,7 +13312,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_12,
+      "id": 12,
       "region_name": "baliqchi",
       "type": 'tumani',
       "map_in": {
@@ -14641,7 +14641,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_13,
+      "id": 13,
       "region_name": "ulungor", //tek
       "type": 'tumani',
       "map_in": {
@@ -15210,7 +15210,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_14,
+      "id": 14,
       "region_name": "buston",
       "type": 'tumani',
       "map_in": {
@@ -15663,7 +15663,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_15,
+      "id": 15,
       "region_name": "buloqboshi",
       "type": 'tumani',
       "map_in": {
@@ -16560,7 +16560,7 @@ export const andijon = {
     },
 
     {
-      "id": 60_16,
+      "id": 16,
       "region_name": "xonobod",
       "type": 'tumani',
       "map_in": {

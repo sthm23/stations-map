@@ -3,45 +3,52 @@ import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 import { IAtcData } from 'src/app/models/interfaces';
 import { allRegions } from 'src/app/data/regions/allRegions';
-import { ShowFormServiceService } from 'src/app/services/show-form-service.service';
+import { allDistrict } from 'src/app/data/regions/allDistrict';
+import { RegionsEmitObj } from '../filter/filter.component';
+import { uzb } from 'src/app/data/regions/uzb';
+import { FormGroup } from '@angular/forms';
+
+
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css'],
-  providers: [LocationIconService, ShowFormServiceService]
 })
 export class MapComponent implements OnInit {
+  filterBlock = false;
   markers:IAtcData[] = []
+  markersObj:any = {}
   map!:L.Map;
   allRegionLayer!:L.GeoJSON<any>;
   showUpdateForm = false
+  showFormItem!: {station:IAtcData, markers: any};
   showAddForm = false
+  addFormLocation!:L.LatLng;
+
   constructor(
     private requestApi: LocationIconService,
-    // private ShowFormService: ShowFormServiceService
-  ) { }
+  ) {  }
 
   ngOnInit(): void {
     this.map = this.drowMap();
     this.drowMapInfo(this.map);
     const uzbMap = this.sortRegions();
 
-    this.allRegionLayer = this.drowRegionsInMap(uzbMap, this.map);
-    // this.generateMarkers(this.map);
+    this.allRegionLayer = this.drowRegionsInMap(uzb, this.map);
+    this.generateMarkers(this.map);
 
     this.map.on('click', (e) => {
       const location = e.latlng;
-      console.log(location);
+      // console.log(location);
 
     if ((e.originalEvent.target as HTMLElement).tagName === 'IMG') {
-        // const id = (e.originalEvent.target as HTMLElement).id;
-        // this.ShowFormService.clickedIconId = id;
-        // this.ShowFormService.elemIcon = e.originalEvent.target as HTMLElement;
-        // const station:IAtcData = this.markers.find(item => item._id === id)!;
-        // this.ShowFormService.fillForm(station)
-        this.showUpdateForm = true
+      this.showUpdateForm = true
+      const id = (e.originalEvent.target as HTMLElement).id;
+      const station:IAtcData = this.markers.find(item => item._id === id)!;
+      this.showFormItem = {station: station, markers: this.markersObj};
     } else {
         this.showAddForm = true
+        this.addFormLocation = location
     }
 
     })
@@ -82,15 +89,13 @@ export class MapComponent implements OnInit {
   }
 
   addMarkersToMap(map:any, arr:IAtcData[]) {
-
-    const markers:any = {};
     for (let i = 0; i < arr.length; i++) {
       const icon:IAtcData = arr[i];
       const id = icon['_id'];
       // Create and save a reference to each marker
       const station: any = this.pastMarker(icon, map) //.bindPopup(answerObj.answer);
       station['_icon'].setAttribute('id', id);
-      markers[id] = station as any;
+      this.markersObj[id] = station as any;
     }
   }
 
@@ -100,7 +105,7 @@ export class MapComponent implements OnInit {
 
   setIconColor(work:boolean) {
     const greenIcon = L.icon({
-      iconUrl: '../../../assets/icons/locat_con_gren.svg',
+      iconUrl: './assets/icons/locat_con_gren.svg',
 
       iconSize: [12, 12], // size of the icon
       iconAnchor: [10, 24], // маргин когда увечения попровляется
@@ -108,7 +113,7 @@ export class MapComponent implements OnInit {
     });
 
     const redIcon = L.icon({
-      iconUrl: '../../../assets/icons/locat_con.svg',
+      iconUrl: './assets/icons/locat_con.svg',
 
       iconSize: [12, 12], // size of the icon
       iconAnchor: [10, 24], // маргин когда увечения попровляется
@@ -128,10 +133,6 @@ export class MapComponent implements OnInit {
     });
   }
 
-  drowRegions() {
-
-  }
-
   showUpdateFormFunc(e:boolean) {
     this.showUpdateForm = e;
   }
@@ -140,17 +141,45 @@ export class MapComponent implements OnInit {
     this.showAddForm = e;
   }
 
-  filterRegion(e:any) {
+  filterRegion(e:RegionsEmitObj) {
     // console.log(e);
-    const regionMap:any = allRegions.filter(item=> item.id === e.id)
-    .map(item => {
-      return item.mapIn
-    }).filter((item: any ) => item.geometry !== null);
 
-    // console.log(regionMap);
+    let regionMap:any;
+    let location!:IAtcData[];
+    if(e.id){
+      this.map.setView([+e.search_detail.coordinates.lat, +e.search_detail.coordinates.lon], +e.search_detail.coordinates.zoom)
+      if(e.dist.length === 0) {
+        location = this.markers.filter(item=> +(item.address as any)['osm_id'] === e.search_detail.osmid);
+
+        regionMap = allRegions.filter(item=> item.id === e.id)
+        .map(item => {
+          return item.mapIn
+        }).filter((item: any ) => item.geometry !== null);
+      } else {
+        const region = allDistrict.find(item => item.id === e.id);
+        regionMap = region?.regions
+          .filter(item => e.dist.some(el=> el.regionId === item.id))
+            .map(item => item.map_in);
+            location = this.markers.filter(item=> +(item.address as any)['osm_id'] === e.search_detail.osmid)
+                          .map(item=>item); // region buyicha sortirovka qilish kerak
+      }
+    } else {
+      this.map.setView([40.191818, 63.564393], 6)
+      regionMap = allRegions.map((item) => {
+        return item.mapIn
+      }).filter((item: any ) => item.geometry !== null);
+      location = this.markers
+    }
+
+    this.markers.forEach(item=>{
+      const id = item._id;
+      this.markersObj[id].remove()
+    })
 
     this.allRegionLayer.remove();
     this.allRegionLayer = this.drowRegionsInMap(regionMap, this.map);
+    this.addMarkersToMap(this.map, location)
+
   }
 
 }

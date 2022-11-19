@@ -1619,7 +1619,7 @@ export const samarqand = {
   },
   "regions": [
     {
-      "id": 30_1,
+      "id": 1,
       "region_name": "samarqand",
       "type": 'shaxar',
       "map_in": {
@@ -2630,7 +2630,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_2,
+      "id": 2,
       "region_name": "bulungur",
       "type": 'tumani',
       "map_in": {
@@ -4043,7 +4043,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_3,
+      "id": 3,
       "region_name": "ishtixon",
       "type": 'tumani',
       "map_in": {
@@ -5440,7 +5440,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_4,
+      "id": 4,
       "region_name": "jomboy",
       "type": 'tumani',
       "map_in": {
@@ -6705,7 +6705,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_5,
+      "id": 5,
       "region_name": "qoshrabot",
       "type": 'tumani',
       "map_in": {
@@ -7638,7 +7638,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_6,
+      "id": 6,
       "region_name": "kattaqorgon",
       "type": 'tumani',
       "map_in": {
@@ -9766,7 +9766,7 @@ export const samarqand = {
       },
       "settlement": [
         {
-          "id": 30_6_1,
+          "id": 6-1,
           "region_name": "ingichka",
           "type": 'qishloq',
           "map_in": {
@@ -10429,7 +10429,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_7,
+      "id": 7,
       "region_name": "narpay",
       "type": 'tumani',
       "map_in": {
@@ -11542,7 +11542,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_8,
+      "id": 8,
       "region_name": "nurobot",
       "type": 'tumani',
       "map_in": {
@@ -13025,7 +13025,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_9,
+      "id": 9,
       "region_name": "oqdaryo",
       "type": 'tumani',
       "map_in": {
@@ -14366,7 +14366,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_10,
+      "id": 10,
       "region_name": "paxtachi",
       "type": 'tumani',
       "map_in": {
@@ -15295,7 +15295,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_11,
+      "id": 11,
       "region_name": "poyariq",
       "type": 'tumani',
       "map_in": {
@@ -16400,7 +16400,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_12,
+      "id": 12,
       "region_name": "pastarg'om",
       "type": 'tumani',
       "map_in": {
@@ -17865,7 +17865,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_13,
+      "id": 13,
       "region_name": "samarqand",
       "type": 'tumani',
       "map_in": {
@@ -19879,7 +19879,7 @@ export const samarqand = {
       },
       "settlement": [
         {
-          "id": 30_13_1,
+          "id": 13-1,
           "region_name": "xishrav",
           "type": 'qishloq',
           "map_in": {
@@ -20392,7 +20392,7 @@ export const samarqand = {
         },
 
         {
-          "id": 30_13_2,
+          "id": 13-2,
           "region_name": "farxod",
           "type": 'qishloq',
           "map_in": {
@@ -20551,7 +20551,7 @@ export const samarqand = {
         },
 
         {
-          "id": 30_13_3,
+          "id": 13-3,
           "region_name": "kimyogarlar",
           "type": 'qishloq',
           "map_in": {
@@ -21123,7 +21123,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_14,
+      "id": 14,
       "region_name": "tayloq",
       "type": 'tumani',
       "map_in": {
@@ -22424,7 +22424,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_15,
+      "id": 15,
       "region_name": "urgut",
       "type": 'tumani',
       "map_in": {
@@ -23697,7 +23697,7 @@ export const samarqand = {
     },
 
     {
-      "id": 30_16,
+      "id": 16,
       "region_name": "kattaqorgon",
       "type": 'shaxar',
       "map_in": {

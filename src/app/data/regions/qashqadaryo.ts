@@ -959,7 +959,7 @@ export const qashqadaryo = {
   },
   "regions": [
     {
-      "id": 70_1,
+      "id": 1,
       "region_name": "qarshi",
       "type": 'shaxar',
       "map_in": {
@@ -1562,7 +1562,7 @@ export const qashqadaryo = {
         }
       },
       "settlement": {
-        "id": 70_1_1,
+        "id": 1-1,
         "region_name": "sheyxali",
         "type": 'qishloq',
         "map_in": {
@@ -1976,7 +1976,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_2,
+      "id": 2,
       "region_name": "qarshi",
       "type": 'tumani',
       "map_in": {
@@ -3187,7 +3187,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_3,
+      "id": 3,
       "region_name": "chiroqchi",
       "type": 'tumani',
       "map_in": {
@@ -3920,7 +3920,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_4,
+      "id": 4,
       "region_name": "dexqonobod",
       "type": 'tumani',
       "map_in": {
@@ -4801,7 +4801,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_5,
+      "id": 5,
       "region_name": "Guzor",
       "type": 'tumani',
       "map_in": {
@@ -5578,7 +5578,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_6,
+      "id": 6,
       "region_name": "qamashi",
       "type": 'tumani',
       "map_in": {
@@ -7019,7 +7019,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_7,
+      "id": 7,
       "region_name": "Koson",
       "type": 'tumani',
       "map_in": {
@@ -7740,7 +7740,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_8,
+      "id": 8,
       "region_name": "kasbiy",
       "type": 'tumani',
       "map_in": {
@@ -8201,7 +8201,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_9,
+      "id": 9,
       "region_name": "kitob",
       "type": 'tumani',
       "map_in": {
@@ -9406,7 +9406,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_10,
+      "id": 10,
       "region_name": "mirishkor",
       "type": 'tumani',
       "map_in": {
@@ -9739,7 +9739,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_11,
+      "id": 11,
       "region_name": "muborak",
       "type": 'tumani',
       "map_in": {
@@ -10252,7 +10252,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_12,
+      "id": 12,
       "region_name": "nishon",
       "type": 'tumani',
       "map_in": {
@@ -10645,7 +10645,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_13,
+      "id": 13,
       "region_name": "shaxrisabz",
       "type": 'tumani',
       "map_in": {
@@ -12002,7 +12002,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_14,
+      "id": 14,
       "region_name": "yakkabog",
       "type": 'tumani',
       "map_in": {
@@ -13063,7 +13063,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_15,
+      "id": 15,
       "region_name": "kukdali",
       "type": 'tumani',
       "map_in": {
@@ -13804,7 +13804,7 @@ export const qashqadaryo = {
     },
 
     {
-      "id": 70_16,
+      "id": 16,
       "region_name": "shaxrisabz",
       "type": 'shaxri',
       "map_in": {

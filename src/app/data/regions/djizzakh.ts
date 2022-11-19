@@ -1279,7 +1279,7 @@ export const djizzakh = {
   },
   "regions": [
     {
-      "id": 25_1,
+      "id": 1,
       "region_name": "jizzax",
       "type": 'shaxar',
       "map_in": {
@@ -1792,7 +1792,7 @@ export const djizzakh = {
     },
 
     {
-      "id": 25_2,
+      "id": 2,
       "region_name": "arnasoy",
       "type": 'tumani',
       "map_in": {
@@ -1989,7 +1989,7 @@ export const djizzakh = {
     },
 
     {
-      "id": 25_3,
+      "id": 3,
       "region_name": "baxmal",
       "type": 'tumani',
       "map_in": {
@@ -2910,7 +2910,7 @@ export const djizzakh = {
     },
 
     {
-      "id": 25_4,
+      "id": 4,
       "region_name": "dostlik",
       "type": 'tumani',
       "map_in": {
@@ -3071,7 +3071,7 @@ export const djizzakh = {
     },
 
     {
-      "id": 25_5,
+      "id": 5,
       "region_name": "forish",
       "type": 'tumani',
       "map_in": {
@@ -4088,7 +4088,7 @@ export const djizzakh = {
     },
 
     {
-      "id": 25_6,
+      "id": 6,
       "region_name": "galla-orol",
       "type": 'tumani',
       "map_in": {
@@ -4897,7 +4897,7 @@ export const djizzakh = {
     },
 
     {
-      "id": 25_7,
+      "id": 7,
       "region_name": "sharof-rashidov",
       "type": 'tumani',
       "map_in": {
@@ -5816,7 +5816,7 @@ export const djizzakh = {
     },
 
     {
-      "id": 25_8,
+      "id": 8,
       "region_name": "mirzachol",
       "type": 'tumani',
       "map_in": {
@@ -6021,7 +6021,7 @@ export const djizzakh = {
     },
 
     {
-      "id": 25_9,
+      "id": 9,
       "region_name": "paxtakor",
       "type": 'tumani',
       "map_in": {
@@ -6258,7 +6258,7 @@ export const djizzakh = {
     },
 
     {
-      "id": 25_10,
+      "id": 10,
       "region_name": "yangi-obod",
       "type": 'tumani',
       "map_in": {
@@ -7631,7 +7631,7 @@ export const djizzakh = {
     },
 
     {
-      "id": 25_11,
+      "id": 11,
       "region_name": "zamin",
       "type": 'tumani',
       "map_in": {
@@ -8344,7 +8344,7 @@ export const djizzakh = {
     },
 
     {
-      "id": 25_12,
+      "id": 12,
       "region_name": "zarbdor",
       "type": 'tumani',
       "map_in": {
@@ -8793,7 +8793,7 @@ export const djizzakh = {
     },
 
     {
-      "id": 25_13,
+      "id": 13,
       "region_name": "zafarobod",
       "type": 'tumani',
       "map_in": {
@@ -9284,34 +9284,6 @@ export const djizzakh = {
         }
       }
     },
-
-    // {
-    //   "id": 25_14,
-    //   "region_name": "Termez",
-    //   "type": 'tumani',
-    //   "map_in": {
-    //     "type": "Feature",
-    //     "properties": { "party": "Town" },
-    //     "geometry": {
-    //       "type": "Polygon",
-    //       "coordinates": null
-    //     }
-    //   }
-    // },
-
-    // {
-    //   "id": 25_15,
-    //   "region_name": "Termez",
-    //   "type": 'tumani',
-    //   "map_in": {
-    //     "type": "Feature",
-    //     "properties": { "party": "Town" },
-    //     "geometry": {
-    //       "type": "Polygon",
-    //       "coordinates": null
-    //     }
-    //   }
-    // },
 
   ]
 }

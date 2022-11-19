@@ -771,7 +771,7 @@ export const navoi =   {
     },
     "regions": [
         {
-            "id": 85_1,
+            "id": 1,
             "region_name": "navoi",
             "type": 'shaxar',
             "map_in": {
@@ -1295,12 +1295,12 @@ export const navoi =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
 
         {
-            "id": 85_2,
+            "id": 2,
             "region_name": "kanimex",
             "type": 'region',
             "map_in": {
@@ -1816,7 +1816,7 @@ export const navoi =   {
         },
 
         {
-            "id": 85_3,
+            "id": 3,
             "region_name": "Karmana",
             "type": 'tuman',
             "map_in": {
@@ -2982,12 +2982,12 @@ export const navoi =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
 
         {
-            "id": 85_4,
+            "id": 4,
             "region_name": "Qiziltepa",
             "type": 'tuman',
             "map_in": {
@@ -3579,12 +3579,12 @@ export const navoi =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
 
         {
-            "id": 85_5,
+            "id": 5,
             "region_name": "Xatirchi",
             "type": 'tuman',
             "map_in": {
@@ -4876,12 +4876,12 @@ export const navoi =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
 
         {
-            "id": 85_6,
+            "id": 6,
             "region_name": "Navbahor",
             "type": 'tuman',
             "map_in": {
@@ -5921,12 +5921,12 @@ export const navoi =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
 
         {
-            "id": 85_7,
+            "id": 7,
             "region_name": "Nurota",
             "type": 'tuman',
             "map_in": {
@@ -6636,12 +6636,12 @@ export const navoi =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
 
         {
-            "id": 85_8,
+            "id": 8,
             "region_name": "Tomdi ",
             "type": 'tuman',
             "map_in": {
@@ -6977,12 +6977,12 @@ export const navoi =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
 
         {
-            "id": 85_9,
+            "id": 9,
             "region_name": "Uchquduq ",
             "type": 'tuman',
             "map_in": {
@@ -7162,11 +7162,11 @@ export const navoi =   {
                         ]
                     ]
                 ]
-                } 
+                }
             },
         },
         {
-          "id": 85_10,
+          "id": 10,
           "region_name": "Зарафшан ",
           "type": 'tuman',
           "map_in": {
@@ -7434,9 +7434,9 @@ export const navoi =   {
                       ]
                   ]
               ]
-              } 
+              }
           },
       },
-        
+
     ]
   }

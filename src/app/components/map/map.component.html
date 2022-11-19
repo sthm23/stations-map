@@ -1,9 +1,47 @@
-<div class="map-wrapper" >
-  <div id="map"  >
-  </div>
-  <app-show-station-form (onShowForm)="showUpdateFormFunc($event)" *ngIf="showUpdateForm" class="add-form" cdkDragBoundary=".map-wrapper" cdkDrag></app-show-station-form>
-  <app-add-form (onAddFormShow)="showAddFormFunc($event)" *ngIf="showAddForm" class="add-form" cdkDragBoundary=".map-wrapper" cdkDrag></app-add-form>
 
+<div class="map-wrapper">
+  <div id="map"></div>
+  <app-add-form
+  (onAddFormShow)="showAddFormFunc($event)"
+  *ngIf="showAddForm"
+  class="add-form"
+  cdkDragBoundary=".map-wrapper"
+  cdkDrag
+  [location]="addFormLocation"
+  ></app-add-form>
+
+  <app-show-station-form
+  class="add-form"
+  (onShowForm)="showUpdateFormFunc($event)"
+  [formItem]="showFormItem"
+
+  *ngIf="showUpdateForm"
+  cdkDragBoundary=".map-wrapper"
+  cdkDrag
+  ></app-show-station-form>
+
+  <app-filter
+  class="filter-root"
+  (onRegionFilter)="filterRegion($event)"
+  *ngIf="filterBlock"
+  [ngClass]="{
+    'animate__fadeInUp': filterBlock,
+    'animate__fadeInDown': !filterBlock
+  }"
+  ></app-filter>
+
+  <button
+  type="button"
+  class="show-filter-block-btn"
+  [ngClass]="{'bnt-up':filterBlock }"
+  (click)="filterBlock = !filterBlock"
+  >
+    <mat-icon
+    *ngIf="!filterBlock; else arrowDown"
+    >keyboard_arrow_up</mat-icon>
+
+    <ng-template #arrowDown>
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </ng-template>
+  </button>
 </div>
-
-<app-filter (onRegionFilter)="filterRegion($event)"></app-filter>

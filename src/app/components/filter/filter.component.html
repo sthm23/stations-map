@@ -1,30 +1,31 @@
 <form>
-  <h4>Filter regions</h4>
-<div class="filter-body">
-  <mat-form-field appearance="fill">
-    <mat-label>Choose region</mat-label>
-    <mat-select [(ngModel)]="selectValue" name="regions">
-      <mat-option *ngFor="let region of regions" [value]="region.value" (click)="showDistricts()">
-        {{region.viewValue}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-  <!-- <p> Selected region: {{selectValue}} </p> -->
-  <div class="regions-block" *ngIf="regionBlock">
-    <section class="" [formGroup]="toppings">
-      <h4>Select your toppings:</h4>
-      <p class="district-block"><mat-checkbox [formControlName]="district.name" *ngFor="let district of districts">{{district.name}}</mat-checkbox></p>
-        <!-- <p><mat-checkbox formControlName="extracheese">Extra Cheese</mat-checkbox></p> -->
-        <!-- <p><mat-checkbox formControlName="mushroom">Mushroom</mat-checkbox></p> -->
-    </section>
-
-    <!-- <section class="" [formGroup]="toppings">
-      <h4>You chose:</h4>
-      {{toppings.value | json}}
-    </section> -->
+  <div class="filter-header">
+    <h4 class="region-title">Filter regions</h4>
+    <h4 class="dist-title">Select your districts:</h4>
   </div>
-</div>
+  <div class="filter-body">
+    <mat-form-field appearance="fill">
+      <mat-label>Choose region</mat-label>
+      <mat-select [(ngModel)]="selectValue" name="regions">
+        <mat-option *ngFor="let region of regions" [value]="region.value" (click)="showDistricts()">
+          {{region.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="regions-block" *ngIf="regionBlock">
+      <section class="" [formGroup]="toppings">
 
+        <div class="district-block">
+          <mat-checkbox
+          class="region-inputs"
+          [formControlName]="district.name+district.type"
+          *ngFor="let district of districts">
+          {{district.name +' '+ district.type}}
+          </mat-checkbox>
+        </div>
+      </section>
+    </div>
+  </div>
   <button mat-raised-button color="primary" type="button" (click)="submit()">Filter</button>
 </form>
 

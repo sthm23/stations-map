@@ -1825,7 +1825,7 @@ export const namangan = {
   },
   "regions": [
     {
-      "id": 50_1,
+      "id": 1,
       "region_name": "namangan",
       "type": 'shaxar',
       "map_in": {
@@ -3202,7 +3202,7 @@ export const namangan = {
     },
 
     {
-      "id": 50_2,
+      "id": 2,
       "region_name": "kasansoy",
       "type": 'tumani',
       "map_in": {
@@ -4451,7 +4451,7 @@ export const namangan = {
     },
 
     {
-      "id": 50_3,
+      "id": 3,
       "region_name": "mingbuloq",
       "type": 'tumani',
       "map_in": {
@@ -5104,7 +5104,7 @@ export const namangan = {
     },
 
     {
-      "id": 50_4,
+      "id": 4,
       "region_name": "namangan",
       "type": 'tumani',
       "map_in": {
@@ -6009,7 +6009,7 @@ export const namangan = {
     },
 
     {
-      "id": 50_5,
+      "id": 5,
       "region_name": "narin",
       "type": 'tumani',
       "map_in": {
@@ -7506,7 +7506,7 @@ export const namangan = {
     },
 
     {
-      "id": 50_6,
+      "id": 6,
       "region_name": "pop",
       "type": 'tumani',
       "map_in": {
@@ -8569,7 +8569,7 @@ export const namangan = {
     },
 
     {
-      "id": 50_7,
+      "id": 7,
       "region_name": "turaqurgon",
       "type": 'tumani',
       "map_in": {
@@ -9546,7 +9546,7 @@ export const namangan = {
     },
 
     {
-      "id": 50_8,
+      "id": 8,
       "region_name": "uychi",
       "type": 'tumani',
       "map_in": {
@@ -10327,7 +10327,7 @@ export const namangan = {
     },
 
     {
-      "id": 50_9,
+      "id": 9,
       "region_name": "uchqurgon",
       "type": 'tumani',
       "map_in": {
@@ -11392,7 +11392,7 @@ export const namangan = {
     },
 
     {
-      "id": 50_10,
+      "id": 10,
       "region_name": "chartoq",
       "type": 'tumani',
       "map_in": {
@@ -12537,7 +12537,7 @@ export const namangan = {
     },
 
     {
-      "id": 50_11,
+      "id": 11,
       "region_name": "chust",
       "type": 'tumani',
       "map_in": {
@@ -13390,7 +13390,7 @@ export const namangan = {
     },
 
     {
-      "id": 50_12,
+      "id": 12,
       "region_name": "yangiqurgon",
       "type": 'tumani',
       "map_in": {
@@ -14862,48 +14862,6 @@ export const namangan = {
                 ]
             ]
         ]
-        }
-      }
-    },
-
-    {
-      "id": 50_13,
-      "region_name": "Termez",
-      "type": 'tumani',
-      "map_in": {
-        "type": "Feature",
-        "properties": { "party": "Town" },
-        "geometry": {
-          "type": "Polygon",
-          "coordinates": null
-        }
-      }
-    },
-
-    {
-      "id": 50_14,
-      "region_name": "Termez",
-      "type": 'tumani',
-      "map_in": {
-        "type": "Feature",
-        "properties": { "party": "Town" },
-        "geometry": {
-          "type": "Polygon",
-          "coordinates": null
-        }
-      }
-    },
-
-    {
-      "id": 50_15,
-      "region_name": "Termez",
-      "type": 'tumani',
-      "map_in": {
-        "type": "Feature",
-        "properties": { "party": "Town" },
-        "geometry": {
-          "type": "Polygon",
-          "coordinates": null
         }
       }
     },

@@ -2365,7 +2365,7 @@ export const fargona = {
   },
   "regions": [
     {
-      "id": 40_1,
+      "id": 1,
       "region_name": "fargona",
       "type": 'shaxar',
       "map_in": {
@@ -3494,7 +3494,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_2,
+      "id": 2,
       "region_name": "fargona",
       "type": 'tumani',
       "map_in": {
@@ -5554,9 +5554,9 @@ export const fargona = {
       },
       "settlement": [
         {
-          "id": 40_2_1,
+          "id": '2-1',
           "region_name": "fargona",
-          "type": 'airaport',
+          "type": 'airport',
           "map_in": {
             "type": "Feature",
             "properties": { "party": "Town" },
@@ -5859,7 +5859,7 @@ export const fargona = {
         },
 
         {
-          "id": 40_2_1,
+          "id": '2-2',
           "region_name": "yangi-margilon",
           "type": 'qishloq',
           "map_in": {
@@ -6138,7 +6138,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_3,
+      "id": 3,
       "region_name": "Altiarik",
       "type": 'tumani',
       "map_in": {
@@ -6859,7 +6859,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_4,
+      "id": 4,
       "region_name": "bagdat",
       "type": 'tumani',
       "map_in": {
@@ -7556,7 +7556,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_5,
+      "id": 5,
       "region_name": "beshariq",
       "type": 'tumani',
       "map_in": {
@@ -8113,7 +8113,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_6,
+      "id": 6,
       "region_name": "buvayda",
       "type": 'tumani',
       "map_in": {
@@ -8794,7 +8794,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_7,
+      "id": 7,
       "region_name": "dangara",
       "type": 'tumani',
       "map_in": {
@@ -9583,7 +9583,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_8,
+      "id": 8,
       "region_name": "furqat",
       "type": 'tumani',
       "map_in": {
@@ -10416,7 +10416,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_9,
+      "id": 9,
       "region_name": "qushtepa",
       "type": 'tumani',
       "map_in": {
@@ -11033,7 +11033,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_10,
+      "id": 10,
       "region_name": "quva",
       "type": 'tumani',
       "map_in": {
@@ -11926,7 +11926,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_11,
+      "id": 11,
       "region_name": "quvasoy",
       "type": 'tumani',
       "map_in": {
@@ -12803,7 +12803,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_12,
+      "id": 12,
       "region_name": "rishton",
       "type": 'tumani',
       "map_in": {
@@ -13666,7 +13666,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_13,
+      "id": 13,
       "region_name": "Sokh",
       "type": 'tumani',
       "map_in": {
@@ -14935,7 +14935,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_14,
+      "id": 14,
       "region_name": "tashlaq",
       "type": 'tumani',
       "map_in": {
@@ -15952,7 +15952,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_15,
+      "id": 15,
       "region_name": "uchkuprik",
       "type": 'tumani',
       "map_in": {
@@ -16793,7 +16793,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_16,
+      "id": 16,
       "region_name": "uzbekiston",
       "type": 'tumani',
       "map_in": {
@@ -17684,7 +17684,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_17,
+      "id": 17,
       "region_name": "yazyavan",
       "type": 'tumani',
       "map_in": {
@@ -18461,7 +18461,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_18,
+      "id": 18,
       "region_name": "quqon",
       "type": 'shaxar',
       "map_in": {
@@ -19034,7 +19034,7 @@ export const fargona = {
     },
 
     {
-      "id": 40_19,
+      "id": 19,
       "region_name": "margilon",
       "type": 'shaxar',
       "map_in": {

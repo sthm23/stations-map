@@ -1,31 +1,40 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { IAtcData } from 'src/app/models/interfaces';
-import { MapComponent } from '../map/map.component';
+import { LocationIconService } from 'src/app/services/location-icon.service';
 
 @Component({
   selector: 'app-add-form',
   templateUrl: './add-form.component.html',
   styleUrls: ['./add-form.component.css']
 })
-export class AddFormComponent implements OnInit {
-  @Output() onAddFormShow = new EventEmitter<boolean>()
+export class AddFormComponent implements OnInit, OnChanges {
+  @Output() onAddFormShow = new EventEmitter<boolean>();
+  @Input() location:any;
   map:any;
   form!: FormGroup;
   formAtc:any = [];
-  clickedIconId = ''
-  constructor(private mapCom: MapComponent) {}
+  clickedIconId = '';
+  station!:IAtcData;
+
+  constructor(private requestApi: LocationIconService,) {}
+
+  ngOnChanges(changes: SimpleChanges): void {
+    const {location} = changes;
+    console.log(changes);
+
+    if(location.previousValue) {
+      this.form.reset();
+      this.updateForm();
+    }
+
+  }
 
   ngOnInit(): void {
-    // this.mapCom.map.on('click', (e) => {
-    //   const location = e.latlng;
-    // if ((e.originalEvent.target as HTMLElement).tagName === 'IMG') {
-    //     const id = (e.originalEvent.target as HTMLElement).id;
-    //     this.clickedIconId = id;
-    //     const station:IAtcData = this.mapCom.markers.find(item => item._id === id)!;
-    // }
+    // const {lat, lon} = this.location
+    // console.log(this.location);
 
-    // })
+
 
     this.form = new FormGroup({
       town: new FormControl('', [Validators.required]),
@@ -41,18 +50,50 @@ export class AddFormComponent implements OnInit {
         lang: new FormControl('', Validators.required),
         lat: new FormControl('', Validators.required)
       }),
-      adress: new FormControl('', Validators.required)
+      address: new FormControl('', Validators.required)
+    });
+
+    this.updateForm();
+  }
+
+  updateForm() {
+    const address$ = this.requestApi.getAddress(this.location.lat, this.location.lng);
+    address$.subscribe((obs:any)=> {
+      // console.log(obs);
+      this.station = {
+        town: '',
+        atc: [''],
+        address: {
+          display_name: obs.display_name,
+          osm_id: obs.osm_id,
+          osm_type: obs.osm_type,
+          ...obs.address
+        },
+        location: [this.location.lat.toFixed(4), this.location.lng.toFixed(4)],
+        cabel:{
+          length: 0,
+          amount: 0,
+          empty: 0,
+          busy: 0,
+        },
+        work: true
+      }
+      this.fillForm();
     });
   }
 
-  ngDoCheck(): void {
-    // this.map.on('click', (e:any) => console.log(e))
-  }
-
   submit() {
-    const formData = {...this.form.value}
-    console.log(this.form);
+    const formData:IAtcData = {
+      ...this.form.value,
+      address: this.station.address,
+      location: this.station.location,
+    }
+    // console.log(this.form);
     console.log(formData);
+    this.requestApi.addLocation(formData)
+      .subscribe(s=> {
+        console.log(s);
+      })
   }
 
   addAtc() {
@@ -67,9 +108,30 @@ export class AddFormComponent implements OnInit {
     const atcArrValue = this.form.get('atc') as FormArray;
     atcArrValue.value.splice(id, 1);
   }
-  closeForm(e:Event, elem?: HTMLElement) {
-    // elem?.remove();
+  closeForm() {
     this.onAddFormShow.emit(false);
+  }
+
+  fillForm() {
+    (this.form.controls['atc'] as FormArray<FormControl>).clear();
+    (this.station.atc as string[]).forEach(item=> this.addAtc())
+
+    this.form = new FormGroup({
+      town: new FormControl(this.station?.town, [Validators.required]),
+      work: new FormControl(this.station?.work, Validators.requiredTrue),
+      cabel: new FormGroup({
+        amount: new FormControl(this.station?.cabel?.amount, Validators.required),
+        busy: new FormControl(this.station?.cabel?.busy, Validators.required),
+        empty: new FormControl(this.station?.cabel?.empty, Validators.required),
+        length: new FormControl(this.station?.cabel?.length, Validators.required),
+      }),
+      atc: new FormArray((this.station.atc as string[]).map(item=> new FormControl(item))),
+      location: new FormGroup({
+        lang: new FormControl(this.station?.location[0], Validators.required),
+        lat: new FormControl(+this.station?.location[1], Validators.required)
+      }),
+      address: new FormControl(this.station?.address!['display_name'], Validators.required)
+    });
   }
 
 

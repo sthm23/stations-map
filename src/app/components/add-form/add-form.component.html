@@ -1,8 +1,8 @@
 
-    <form class="form" [formGroup]="form" (ngSubmit)="submit()" #formInfo  >
+    <form class="form" [formGroup]="form" (ngSubmit)="submit()">
       <div class="form-header">
         <h2 class="title">Добавить данные:</h2>
-        <button type="button" class="close" (click)="closeForm($event, formInfo)" appMapClick>&times;</button>
+        <button type="button" class="close" (click)="closeForm()" appMapClick>&times;</button>
       </div>
       <div class="form-body">
         <div class="form-station-name-block">
@@ -12,20 +12,15 @@
 
         <div class="form-station-adress-block">
           <h5>Stansiya manzili</h5>
-          <input type="text" formControlName="adress">
+          <input type="text" formControlName="address">
         </div>
 
         <div class="form-station-status-block">
           <h5>Stansiya holati:</h5>
-          <div class="check-status">
-            <label for="status-yes">Работает
-            <input type="radio" name="status" id="status-yes" checked >
-            </label>
-            <label for="status-not">Не работает
-            <input type="radio" name="status" id="status-not">
-            </label>
-
-          </div>
+          <mat-button-toggle-group formControlName="work">
+            <mat-button-toggle id="toggle-btn" [value]="true">Работает</mat-button-toggle>
+            <mat-button-toggle id="toggle-btn" [value]="false">Не работает</mat-button-toggle>
+          </mat-button-toggle-group>
         </div>
 
         <div class="form-station-location-block">

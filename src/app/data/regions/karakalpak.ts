@@ -663,7 +663,7 @@ export const karakalpak = {
     },
     "regions": [
       {
-        "id": 95_1,
+        "id": 1,
         "region_name": " Нукус",
         "type": 'shaxar',
         "map_in": {
@@ -1214,9 +1214,9 @@ export const karakalpak = {
           }
         }
       },
-  
+
       {
-        "id": 95_2,
+        "id": 2,
         "region_name": "Амударья",
         "type": 'tumani',
         "map_in": {
@@ -1999,9 +1999,9 @@ export const karakalpak = {
           }
         }
       },
-  
+
       {
-        "id": 95_3,
+        "id": 3,
         "region_name": "Беруний",
         "type": 'tumani',
         "map_in": {
@@ -2452,9 +2452,9 @@ export const karakalpak = {
           }
         }
       },
-  
+
       {
-        "id": 95_4,
+        "id": 4,
         "region_name": "Бозатау",
         "type": 'tumani',
         "map_in": {
@@ -3073,9 +3073,9 @@ export const karakalpak = {
           }
         }
       },
-  
+
       {
-        "id": 95_5,
+        "id": 5,
         "region_name": "Канлыкуль",
         "type": 'tumani',
         "map_in": {
@@ -3774,9 +3774,9 @@ export const karakalpak = {
           }
         }
       },
-  
+
       {
-        "id": 95_6,
+        "id": 6,
         "region_name": "Караузяк",
         "type": 'tumani',
         "map_in": {
@@ -4409,9 +4409,9 @@ export const karakalpak = {
           }
         }
       },
-  
+
       {
-        "id": 95_7,
+        "id": 7,
         "region_name": "Кегейли",
         "type": 'tumani',
         "map_in": {
@@ -4902,9 +4902,9 @@ export const karakalpak = {
           }
         }
       },
-  
+
       {
-        "id": 95_8,
+        "id": 8,
         "region_name": "Кунград",
         "type": 'tumani',
         "map_in": {
@@ -5559,9 +5559,9 @@ export const karakalpak = {
           }
         }
       },
-  
+
       {
-        "id": 95_9,
+        "id": 9,
         "region_name": "Муйнак",
         "type": 'tumani',
         "map_in": {
@@ -6148,9 +6148,9 @@ export const karakalpak = {
           }
         }
       },
-  
+
       {
-        "id": 95_10,
+        "id": 10,
         "region_name": "Нукус",
         "type": 'tumani',
         "map_in": {
@@ -7131,9 +7131,9 @@ export const karakalpak = {
           }
         }
       },
-  
+
       {
-        "id": 95_11,
+        "id": 11,
         "region_name": "Тахиаташ",
         "type": 'tumani',
         "map_in": {
@@ -7752,9 +7752,9 @@ export const karakalpak = {
           }
         }
       },
-  
+
       {
-        "id": 95_12,
+        "id": 12,
         "region_name": "Тахтакупыр",
         "type": 'tumani',
         "map_in": {
@@ -8013,9 +8013,9 @@ export const karakalpak = {
           }
         }
       },
-  
+
       {
-        "id": 95_13,
+        "id": 13,
         "region_name": "Турткульский",
         "type": 'tumani',
         "map_in": {
@@ -8406,9 +8406,9 @@ export const karakalpak = {
           }
         }
       },
-  
+
       {
-        "id": 95_14,
+        "id": 14,
         "region_name": "Ходжейли",
         "type": 'tumani',
         "map_in": {
@@ -9027,9 +9027,9 @@ export const karakalpak = {
           }
         }
       },
-  
+
       {
-        "id": 95_15,
+        "id": 15,
         "region_name": "Чимбай",
         "type": 'tumani',
         "map_in": {
@@ -9501,7 +9501,7 @@ export const karakalpak = {
         }
       },
       {
-        "id": 95_16,
+        "id": 16,
         "region_name": "Шуманай",
         "type": 'tumani',
         "map_in": {
@@ -9837,7 +9837,7 @@ export const karakalpak = {
         }
       },
       {
-        "id": 95_17,
+        "id": 17,
         "region_name": "Элликкалин",
         "type": 'tumani',
         "map_in": {
@@ -10324,6 +10324,6 @@ export const karakalpak = {
           }
         }
       },
-  
+
     ]
   }

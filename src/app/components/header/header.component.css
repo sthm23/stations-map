@@ -6,13 +6,22 @@
 }
 
 .header{
-  height: 10vh;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 10;
+  height: 5vh;
+  width: 30vw;
+
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(180deg, #558FEE 0%, #3CB3F1 100%);
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .logo{
@@ -32,13 +41,13 @@ input{
   border: 1px solid rgb(112, 112, 112);
 }
 
-nav{
+/* nav{
   flex-grow: 1;
-}
+} */
 ul{
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 10px;
   list-style: none;
 }

@@ -955,7 +955,7 @@ export const surxondaryo = {
   },
   "regions": [
     {
-      "id": 75_1,
+      "id": 1,
       "region_name": "Termez",
       "type": 'shaxar',
       "map_in": {
@@ -1340,7 +1340,7 @@ export const surxondaryo = {
     },
 
     {
-      "id": 75_2,
+      "id": 2,
       "region_name": "Qumqurgon",
       "type": 'tuman',
       "map_in": {
@@ -2585,7 +2585,7 @@ export const surxondaryo = {
     },
 
     {
-      "id": 75_3,
+      "id": 3,
       "region_name": "termez",
       "type": 'tuman',
       "map_in": {
@@ -3056,7 +3056,7 @@ export const surxondaryo = {
     },
 
     {
-      "id": 75_4,
+      "id": 4,
       "region_name": "Denov",
       "type": 'tumani',
       "map_in": {
@@ -3777,7 +3777,7 @@ export const surxondaryo = {
     },
 
     {
-      "id": 75_5,
+      "id": 5,
       "region_name": "Uzun",
       "type": 'tumani',
       "map_in": {
@@ -4648,7 +4648,7 @@ export const surxondaryo = {
     },
 
     {
-      'id': 75_6,
+      'id': 6,
       "region_name": "sariosiyo",
       "type": 'tumani',
       "map_in": {
@@ -5783,7 +5783,7 @@ export const surxondaryo = {
     },
 
     {
-      "id": 75_7,
+      "id": 7,
       "region_name": "boysun",
       "type": 'tumani',
       "map_in": {
@@ -6748,7 +6748,7 @@ export const surxondaryo = {
     },
 
     {
-      "id": 75_8,
+      "id": 8,
       "region_name": "Sherobod",
       "type": 'tumani',
       "map_in": {
@@ -7573,7 +7573,7 @@ export const surxondaryo = {
     },
 
     {
-      "id": 75_9,
+      "id": 9,
       "region_name": "shurchi",
       "type": 'tumani',
       "map_in": {
@@ -8518,7 +8518,7 @@ export const surxondaryo = {
     },
 
     {
-      "id": 75_10,
+      "id": 10,
       "region_name": "angor",
       "type": 'tumani',
       "map_in": {
@@ -9635,7 +9635,7 @@ export const surxondaryo = {
     },
 
     {
-      "id": 75_11,
+      "id": 11,
       "region_name": "jarqurgon",
       "type": 'tumani',
       "map_in": {
@@ -10622,7 +10622,7 @@ export const surxondaryo = {
 
 
     {
-      "id": 75_12,
+      "id": 12,
       "region_name": "muzrobod",
       "type": 'tumani',
       "map_in": {
@@ -11640,7 +11640,7 @@ export const surxondaryo = {
 
 
     {
-      "id": 75_13,
+      "id": 13,
       "region_name": "qiziriq",
       "type": 'tumani',
       "map_in": {
@@ -12525,7 +12525,7 @@ export const surxondaryo = {
     },
 
     {
-      "id": 75_14,
+      "id": 14,
       "region_name": "bandixon",
       "type": 'tumani',
       "map_in": {
@@ -13294,7 +13294,7 @@ export const surxondaryo = {
     },
 
     {
-      "id": 75_15,
+      "id": 15,
       "region_name": "oltinsoy",
       "type": 'tumani',
       "map_in": {

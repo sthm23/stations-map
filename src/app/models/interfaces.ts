@@ -2,9 +2,10 @@ export interface IAtcData {
   _id?: any,
   town: string,
   atc: string | string[],
-  adress?: {
+  address?: {
     // display_name?: string
-    [key:string]: string,
+    [key:string]: string | number,
+    osm_id: number,
   },
   location: string[],
   work: boolean,

@@ -1055,7 +1055,7 @@ export const sirdaryo = {
   },
   "regions": [
     {
-      "id": 20_1,
+      "id": 1,
       "region_name": "guliston",
       "type": 'shaxar',
       "map_in": {
@@ -1648,7 +1648,7 @@ export const sirdaryo = {
     },
 
     {
-      "id": 20_2,
+      "id": 2,
       "region_name": "sirdaryo",
       "type": 'tumani',
       "map_in": {
@@ -2637,7 +2637,7 @@ export const sirdaryo = {
     },
 
     {
-      "id": 20_3,
+      "id": 3,
       "region_name": "oqoltin",
       "type": 'tumani',
       "map_in": {
@@ -2842,7 +2842,7 @@ export const sirdaryo = {
     },
 
     {
-      "id": 20_4,
+      "id": 4,
       "region_name": "boyaut",
       "type": 'tumani',
       "map_in": {
@@ -3199,7 +3199,7 @@ export const sirdaryo = {
     },
 
     {
-      "id": 20_5,
+      "id": 5,
       "region_name": "guliston",
       "type": 'tumani',
       "map_in": {
@@ -4139,7 +4139,7 @@ export const sirdaryo = {
       },
       "settlement": [
         {
-          "id": 20_5_1,
+          "id": 5_1,
           "region_name": "ulugobod",
           "type": 'shaxarchasi',
           "map_in": {
@@ -4360,7 +4360,7 @@ export const sirdaryo = {
         },
 
         {
-          "id": 20_5_2,
+          "id": 5_2,
           "region_name": "Bahor",
           "type": 'aholi-punkti',
           "map_in": {
@@ -4511,11 +4511,11 @@ export const sirdaryo = {
             }
           }
         },
-      ] 
+      ]
     },
 
     {
-      "id": 20_6,
+      "id": 6,
       "region_name": "xavast",
       "type": 'tumani',
       "map_in": {
@@ -4896,7 +4896,7 @@ export const sirdaryo = {
     },
 
     {
-      "id": 20_7,
+      "id": 7,
       "region_name": "mirzaobod",
       "type": 'tumani',
       "map_in": {
@@ -5225,7 +5225,7 @@ export const sirdaryo = {
     },
 
     {
-      "id": 20_8,
+      "id": 8,
       "region_name": "sardoba",
       "type": 'tumani',
       "map_in": {
@@ -5378,7 +5378,7 @@ export const sirdaryo = {
     },
 
     {
-      "id": 20_9,
+      "id": 9,
       "region_name": "sayxunobod",
       "type": 'tumani',
       "map_in": {
@@ -6231,7 +6231,7 @@ export const sirdaryo = {
     },
 
     {
-      "id": 20_10,
+      "id": 10,
       "region_name": "yangiyer",
       "type": 'tumani',
       "map_in": {
@@ -6470,52 +6470,5 @@ export const sirdaryo = {
         }
       }
     },
-
-
-
-
-
-    // {
-    //   "id": 20_13,
-    //   "region_name": "Termez",
-    //   "type": 'tumani',
-    //   "map_in": {
-    //     "type": "Feature",
-    //     "properties": { "party": "Town" },
-    //     "geometry": {
-    //       "type": "Polygon",
-    //       "coordinates": null
-    //     }
-    //   }
-    // },
-
-    // {
-    //   "id": 20_14,
-    //   "region_name": "Termez",
-    //   "type": 'tumani',
-    //   "map_in": {
-    //     "type": "Feature",
-    //     "properties": { "party": "Town" },
-    //     "geometry": {
-    //       "type": "Polygon",
-    //       "coordinates": null
-    //     }
-    //   }
-    // },
-
-    // {
-    //   "id": 20_15,
-    //   "region_name": "Termez",
-    //   "type": 'tumani',
-    //   "map_in": {
-    //     "type": "Feature",
-    //     "properties": { "party": "Town" },
-    //     "geometry": {
-    //       "type": "Polygon",
-    //       "coordinates": null
-    //     }
-    //   }
-    // },
-
   ]
 }

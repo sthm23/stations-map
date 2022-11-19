@@ -169,3 +169,7 @@ input.ng-invalid.ng-touched{
   border: 2px solid red;
   box-sizing: border-box;
 }
+
+:host ::ng-deep #toggle-btn .mat-button-toggle-button .mat-button-toggle-label-content {
+  line-height: 24px;
+}

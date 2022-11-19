@@ -1,3 +1,21 @@
+form{
+  padding: 20px;
+}
+/*header from*/
+.filter-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dist-title{
+  align-self: flex-start;
+  flex-grow: 1;
+}
+.region-title{
+  width: 300px;
+}
+
+
 .regions-block{
   display: flex;
   align-items: center;
@@ -7,5 +25,15 @@
 .filter-body{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 20px;
 }
+.district-block{
+
+}
+.region-inputs{
+  margin-left: 10px;
+}
+
+
+

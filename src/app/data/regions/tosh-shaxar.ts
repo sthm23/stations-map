@@ -913,7 +913,7 @@ export const toshkent_shaxar = {
   },
   "regions": [
     {
-      "id": 1_1,
+      "id": 1,
       "region_name": "chilonzor",
       "type": 'tumani',
       "map_in": {
@@ -1330,7 +1330,7 @@ export const toshkent_shaxar = {
     },
 
     {
-      "id": 1_2,
+      "id": 2,
       "region_name": "uchtepa",
       "type": 'tumani',
       "map_in": {
@@ -1995,7 +1995,7 @@ export const toshkent_shaxar = {
     },
 
     {
-      "id": 1_3,
+      "id": 3,
       "region_name": "olmazor",
       "type": 'tumani',
       "map_in": {
@@ -2240,7 +2240,7 @@ export const toshkent_shaxar = {
     },
 
     {
-      "id": 1_4,
+      "id": 4,
       "region_name": "mirzo-ulugbek",
       "type": 'tumani',
       "map_in": {
@@ -3095,7 +3095,7 @@ export const toshkent_shaxar = {
     },
 
     {
-      "id": 1_5,
+      "id": 5,
       "region_name": "yashnabod",
       "type": 'tumani',
       "map_in": {
@@ -3492,7 +3492,7 @@ export const toshkent_shaxar = {
     },
 
     {
-      "id": 1_6,
+      "id": 6,
       "region_name": "mirobod",
       "type": 'tumani',
       "map_in": {
@@ -3785,7 +3785,7 @@ export const toshkent_shaxar = {
     },
 
     {
-      "id": 1_7,
+      "id": 7,
       "region_name": "sergeli",
       "type": 'tumani',
       "map_in": {
@@ -4090,7 +4090,7 @@ export const toshkent_shaxar = {
     },
 
     {
-      "id": 1_8,
+      "id": 8,
       "region_name": "yangi-hayot",
       "type": 'tumani',
       "map_in": {
@@ -4367,7 +4367,7 @@ export const toshkent_shaxar = {
     },
 
     {
-      "id": 1_9,
+      "id": 9,
       "region_name": "yunusobod",
       "type": 'tumani',
       "map_in": {
@@ -4952,7 +4952,7 @@ export const toshkent_shaxar = {
     },
 
     {
-      "id": 1_1,
+      "id": 10,
       "region_name": "yakkasaroy",
       "type": 'tumani',
       "map_in": {
@@ -5337,7 +5337,7 @@ export const toshkent_shaxar = {
     },
 
     {
-      "id": 1_11,
+      "id": 11,
       "region_name": "shayhontoxur",
       "type": 'tumani',
       "map_in": {
@@ -5758,7 +5758,7 @@ export const toshkent_shaxar = {
     },
 
     {
-      "id": 1_12,
+      "id": 12,
       "region_name": "bektemir",
       "type": 'tumani',
       "map_in": {
@@ -6105,48 +6105,5 @@ export const toshkent_shaxar = {
         }
       }
     },
-
-    // {
-    //   "id": 1_13,
-    //   "region_name": "Termez",
-    //   "type": 'tumani',
-    //   "map_in": {
-    //     "type": "Feature",
-    //     "properties": { "party": "Town" },
-    //     "geometry": {
-    //       "type": "Polygon",
-    //       "coordinates": null
-    //     }
-    //   }
-    // },
-
-    // {
-    //   "id": 1_14,
-    //   "region_name": "Termez",
-    //   "type": 'tumani',
-    //   "map_in": {
-    //     "type": "Feature",
-    //     "properties": { "party": "Town" },
-    //     "geometry": {
-    //       "type": "Polygon",
-    //       "coordinates": null
-    //     }
-    //   }
-    // },
-
-    // {
-    //   "id": 1_15,
-    //   "region_name": "Termez",
-    //   "type": 'tumani',
-    //   "map_in": {
-    //     "type": "Feature",
-    //     "properties": { "party": "Town" },
-    //     "geometry": {
-    //       "type": "Polygon",
-    //       "coordinates": null
-    //     }
-    //   }
-    // },
-
   ]
 }

@@ -8,7 +8,7 @@ export interface IRepublic {
 export interface ISearch {
   osmtype: string,
   osmid: number,
-  coordinates: {lat:number, lon: number, zoom: number}
+  coordinates?: {lat:number, lon: number}
 }
 export interface regions {
   regionId: number,
@@ -23,11 +23,10 @@ export const republic:IRepublic[] = [
     search_detail: {
       osmtype: 'R',
       osmid: 178016,
-      coordinates: {
-        lon: 72.5355339,
-        lat: 40.7740809,
-        zoom: 9,
-      },
+      // coordinates: {
+      //   lon: 72.5355339,
+      //   lat: 40.7740809
+      // },
     },
     name: "andijon",
     type: "region",
@@ -137,11 +136,10 @@ export const republic:IRepublic[] = [
     search_detail: {
       osmtype: 'R',
       osmid: 178017,
-      coordinates: {
-        lat: 40.9555061,
-        lon: 71.1097749,
-        zoom: 9,
-      },
+      // coordinates: {
+      //   lon: 72.5355339,
+      //   lat: 40.7740809
+      // },
     },
     regions: [
       {
@@ -225,11 +223,10 @@ export const republic:IRepublic[] = [
     search_detail: {
       osmtype: 'R',
       osmid: 178018,
-      coordinates: {
-         lon: 71.25,
-         lat: 40.5,
-         zoom: 9,
-      },
+      // coordinates: {
+      //   lon: 72.5355339,
+      //   lat: 40.7740809
+      // },
     },
     regions: [
       {
@@ -366,11 +363,10 @@ export const republic:IRepublic[] = [
     search_detail: {
       osmtype: 'R',
       osmid: 196251,
-      coordinates: {
-         lon: 69.3711365,
-         lat: 41.0496815,
-         zoom: 9,
-      },
+      // coordinates: {
+      //   lon: 72.5355339,
+      //   lat: 40.7740809
+      // },
     },
     regions: [
       {
@@ -514,11 +510,10 @@ export const republic:IRepublic[] = [
     search_detail: {
       osmtype: 'R',
       osmid: 309346344,
-      coordinates: {
-         lon: 69.274291992,
-         lat: 41.26954950,
-         zoom: 11,
-      },
+      // coordinates: {
+      //   lon: 72.5355339,
+      //   lat: 40.7740809
+      // },
     },
     regions: [
       {
@@ -602,11 +597,10 @@ export const republic:IRepublic[] = [
     search_detail: {
       osmtype: 'R',
       osmid: 196253,
-      coordinates: {
-         lon: 68.4341132,
-         lat: 40.3737191,
-         zoom: 9,
-      },
+      // coordinates: {
+      //   lon: 72.5355339,
+      //   lat: 40.7740809
+      // },
     },
     regions: [
       {
@@ -689,11 +683,10 @@ export const republic:IRepublic[] = [
     search_detail: {
       osmtype: 'R',
       osmid: 196254,
-      coordinates: {
-         lon: 67.4551198,
-         lat: 40.3319095,
-         zoom: 9,
-      },
+      // coordinates: {
+      //   lon: 72.5355339,
+      //   lat: 40.7740809
+      // },
     },
     regions: [
       {
@@ -783,11 +776,10 @@ export const republic:IRepublic[] = [
     search_detail: {
       osmtype: 'R',
       osmid: 196249,
-      coordinates: {
-         lon: 66.1282889,
-         lat: 39.7337023,
-         zoom: 9,
-      },
+      // coordinates: {
+      //   lon: 72.5355339,
+      //   lat: 40.7740809
+      // },
     },
     regions: [
       {
@@ -917,11 +909,10 @@ export const republic:IRepublic[] = [
     search_detail: {
       osmtype: 'R',
       osmid: 196246,
-      coordinates: {
-         lon: 64,
-         lat: 42,
-         zoom: 7,
-      },
+      // coordinates: {
+      //   lon: 72.5355339,
+      //   lat: 40.7740809
+      // },
     },
     regions: [
       {
@@ -993,11 +984,10 @@ export const republic:IRepublic[] = [
     search_detail: {
       osmtype: 'R',
       osmid: 1670973,
-      coordinates: {
-         lon: 63.5470584,
-         lat: 40.229366,
-         zoom: 7,
-      },
+      // coordinates: {
+      //   lon: 72.5355339,
+      //   lat: 40.7740809
+      // },
     },
     regions: [
       {
@@ -1081,11 +1071,10 @@ export const republic:IRepublic[] = [
     search_detail: {
       osmtype: 'R',
       osmid: 196242,
-      coordinates: {
-         lon: 61.1636,
-         lat: 41.2902835,
-         zoom: 9,
-      },
+      // coordinates: {
+      //   lon: 72.5355339,
+      //   lat: 40.7740809
+      // },
     },
     regions: [
       {
@@ -1175,11 +1164,10 @@ export const republic:IRepublic[] = [
     search_detail: {
       osmtype: 'R',
       osmid: 196241,
-      coordinates: {
-         lon: 57.6234617,
-         lat: 43.7738841,
-         zoom: 7,
-      },
+      // coordinates: {
+      //   lon: 72.5355339,
+      //   lat: 40.7740809
+      // },
     },
     regions: [
       {
@@ -1293,11 +1281,10 @@ export const republic:IRepublic[] = [
     search_detail: {
       osmtype: 'R',
       osmid: 1670974,
-      coordinates: {
-         lon: 66.192626,
-         lat: 38.5639397,
-         zoom: 9,
-      },
+      // coordinates: {
+      //   lon: 72.5355339,
+      //   lat: 40.7740809
+      // },
     },
     regions: [
       {
@@ -1411,11 +1398,10 @@ export const republic:IRepublic[] = [
     search_detail: {
       osmtype: 'R',
       osmid: 196248,
-      coordinates: {
-         lon: 67.510986,
-         lat: 37.9520843,
-         zoom: 9,
-      },
+      // coordinates: {
+      //   lon: 72.5355339,
+      //   lat: 40.7740809
+      // },
     },
     regions: [
       {
