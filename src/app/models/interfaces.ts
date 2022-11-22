@@ -6,6 +6,8 @@ export interface IAtcData {
     // display_name?: string
     [key:string]: string | number,
     osm_id: number,
+    display_name: string,
+    county: string,
   },
   location: string[],
   work: boolean,

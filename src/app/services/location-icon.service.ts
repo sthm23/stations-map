@@ -8,9 +8,10 @@ import { IAtcData } from '../models/interfaces';
 })
 export class LocationIconService {
   addressUrl = 'https://nominatim.uztelecom.uz/reverse?'
-  // addressUrl = 'https://nominatim.openstreetmap.org/reverse?accept-language=en&zoom=10'
-  url = 'http://localhost:5000/api/stations'
-  // url = 'https://basestationsmapserver.herokuapp.com/api/stations';
+  // addressUrl = 'https://nominatim.openstreetmap.org/reverse?'
+
+  // url = 'http://localhost:5000/api/stations'
+  url = 'https://basestationsmapserver.herokuapp.com/api/stations';
   constructor(private http: HttpClient) { }
 
   getLocation():Observable<IAtcData[]> {
@@ -49,7 +50,7 @@ export class LocationIconService {
     params = params.append('lon', lon);
     params = params.append('format', 'json');
     params = params.append('accept-language', 'en');
-    params = params.append('zoom', '5');
+    params = params.append('zoom', '12');
 
     return this.http.get(this.addressUrl, {params})
   }

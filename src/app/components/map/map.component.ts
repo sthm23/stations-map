@@ -6,7 +6,6 @@ import { allRegions } from 'src/app/data/regions/allRegions';
 import { allDistrict } from 'src/app/data/regions/allDistrict';
 import { RegionsEmitObj } from '../filter/filter.component';
 import { uzb } from 'src/app/data/regions/uzb';
-import { FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -63,7 +62,7 @@ export class MapComponent implements OnInit {
   }
 
   drowMapInfo(map: any) {
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://map.uztelecom.uz/tile/{z}/{x}/{y}.png', {
       maxZoom: 17,
       attribution: '© OpenStreetMap'
     }).addTo(map);
@@ -92,6 +91,7 @@ export class MapComponent implements OnInit {
     for (let i = 0; i < arr.length; i++) {
       const icon:IAtcData = arr[i];
       const id = icon['_id'];
+
       // Create and save a reference to each marker
       const station: any = this.pastMarker(icon, map) //.bindPopup(answerObj.answer);
       station['_icon'].setAttribute('id', id);
@@ -143,7 +143,6 @@ export class MapComponent implements OnInit {
 
   filterRegion(e:RegionsEmitObj) {
     // console.log(e);
-
     let regionMap:any;
     let location!:IAtcData[];
     if(e.id){
@@ -160,8 +159,9 @@ export class MapComponent implements OnInit {
         regionMap = region?.regions
           .filter(item => e.dist.some(el=> el.regionId === item.id))
             .map(item => item.map_in);
+
             location = this.markers.filter(item=> +(item.address as any)['osm_id'] === e.search_detail.osmid)
-                          .map(item=>item); // region buyicha sortirovka qilish kerak
+              .filter(item=> e.dist.some(el=> (item.address?.display_name.toLowerCase() as string).includes(el.name.toLowerCase())));
       }
     } else {
       this.map.setView([40.191818, 63.564393], 6)
@@ -175,7 +175,8 @@ export class MapComponent implements OnInit {
       const id = item._id;
       this.markersObj[id].remove()
     })
-
+    // console.log('location', location);
+    // console.log('filter', e);
     this.allRegionLayer.remove();
     this.allRegionLayer = this.drowRegionsInMap(regionMap, this.map);
     this.addMarkersToMap(this.map, location)

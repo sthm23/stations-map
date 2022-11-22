@@ -1,23 +1,24 @@
 export interface IRepublic {
   respublicId: number,
-    name: string,
-    search_detail: ISearch,
-    type: string,
-    regions: regions[]
+  name: string,
+  search_detail: ISearch,
+  type: string,
+  regions: regions[]
 }
 export interface ISearch {
   osmtype: string,
   osmid: number,
-  coordinates: {lat:number, lon: number, zoom: number}
+  coordinates: { lat: number, lon: number, zoom: number }
 }
 export interface regions {
   regionId: number,
   name: string,
   type: string,
+  region_osm_id: number,
   neighborhood: string[] | INeighborhood[]
 }
-export interface INeighborhood {id: string, type: string, region_name:string}
-export const republic:IRepublic[] = [
+export interface INeighborhood { id: string, type: string, region_name: string }
+export const republic: IRepublic[] = [
   {
     respublicId: 60,
     search_detail: {
@@ -29,110 +30,126 @@ export const republic:IRepublic[] = [
         zoom: 9,
       },
     },
-    name: "andijon",
+    name: "Andijan",
     type: "region",
     regions: [
       {
         regionId: 1,
-        name: "andijon",
+        name: "Andijon",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 331189322,
       },
       {
         regionId: 2,
-        name: "andijon",
+        name: "Andijon",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372690,
       },
       {
         regionId: 3,
-        name: "asaka",
+        name: "Asaka",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372853,
       },
       {
         regionId: 4,
-        name: "jalaquduq",
+        name: "Jalaquduk",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372807,
       },
       {
         regionId: 5,
-        name: "qorgontepa",
+        name: "Qurghontepa",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372765,
       },
       {
         regionId: 6,
-        name: "marhamat",
+        name: "Marhamat",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372874,
       },
       {
         regionId: 7,
-        name: "izbosgan",
+        name: "Izboskan",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372724,
       },
       {
         regionId: 8,
-        name: "paxtaobod",
+        name: "Pakhtaobod",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372718,
       },
       {
         regionId: 9,
-        name: "xo'jaobod",
+        name: "Xodjaobod",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372664,
       },
       {
         regionId: 10,
-        name: "shahrixon",
+        name: "Shahrikhon",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372736,
       },
       {
         regionId: 11,
-        name: "oltinko'l",
+        name: "Oltinkul",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372697,
       },
       {
         regionId: 12,
-        name: "baliqchi",
+        name: "Baliqchi",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372808,
       },
       {
         regionId: 13,
-        name: "ulug'nor",
+        name: "ulug'nor", //check again
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372682,
       },
       {
         regionId: 14,
-        name: "buston",
+        name: "Bo'zton",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372682,
       },
       {
         regionId: 15,
-        name: "buloqboshi",
+        name: "Bulak bashi",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372697,
       },
       {
         regionId: 16,
-        name: "xonobod",
+        name: "Khonobod",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372697,
       }
     ]
   },
   {
     respublicId: 50,
-    name: "namangan",
+    name: "Namangan",
     type: "region",
     search_detail: {
       osmtype: 'R',
@@ -146,101 +163,114 @@ export const republic:IRepublic[] = [
     regions: [
       {
         regionId: 1,
-        name: "namangan",
+        name: "Namangan",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 14348868,
       },
       {
         regionId: 2,
-        name: "kosonsoy",
+        name: "Kosonsoy",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 27303193,
       },
       {
         regionId: 3,
-        name: "mingbuloq",
+        name: "Mingbuloq",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372817,
       },
       {
         regionId: 4,
-        name: "namangan",
+        name: "Namangan",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 245554769,
       },
       {
         regionId: 5,
-        name: "norin",
+        name: "Norin",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372744,
       },
       {
         regionId: 6,
-        name: "pop",
+        name: "Pop",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372697,
       },
       {
         regionId: 7,
-        name: "to'raqo'rg'on",
+        name: "Toʻraqoʻrgʻon",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 187154935,
       },
       {
         regionId: 8,
-        name: "uychi",
+        name: "Uychi",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372899,
       },
       {
         regionId: 9,
-        name: "uchqo'rg'on",
+        name: "Uchqorghon",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372766,
       },
       {
         regionId: 10,
-        name: "chortoq",
+        name: "Chortoq",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372687,
       },
       {
         regionId: 11,
-        name: "chust",
+        name: "Chust",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372785,
       },
       {
         regionId: 12,
-        name: "yangiqurgon",
+        name: "Yangiqorghon",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372902,
       },
     ]
   },
   {
     respublicId: 40,
-    name: "farg'ona",
+    name: "Fergana",
     type: "region",
     search_detail: {
       osmtype: 'R',
       osmid: 178018,
       coordinates: {
-         lon: 71.25,
-         lat: 40.5,
-         zoom: 9,
+        lon: 71.25,
+        lat: 40.5,
+        zoom: 9,
       },
     },
     regions: [
       {
         regionId: 1,
-        name: "farg'ona",
+        name: "Fergana",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 27143452,
       },
       {
         regionId: 2,
-        name: "farg'ona",
+        name: "Farghona",
         type: "district",
         neighborhood: [
           {
@@ -253,389 +283,444 @@ export const republic:IRepublic[] = [
             region_name: "yangi-margilon",
             type: 'qishloq'
           }
-        ]
+        ],
+        region_osm_id: 309372686,
       },
       {
         regionId: 3,
-        name: "oltiariq",
+        name: "Oltiariq",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372790,
       },
       {
         regionId: 4,
-        name: "bag'dod",
+        name: "Bagdad",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 295885865,
       },
       {
         regionId: 5,
-        name: "beshariq",
+        name: "Beshariq",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372791,
       },
       {
         regionId: 6,
-        name: "buvayda",
+        name: "Buvayda",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372711,
       },
       {
         regionId: 7,
-        name: "dang'ara",
+        name: "Danghara",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372679,
       },
       {
         regionId: 8,
-        name: "furqat",
+        name: "Furqat",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372710,
       },
       {
         regionId: 9,
-        name: "qo'shtepa",
+        name: "Qoshtepa",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372737,
       },
       {
         regionId: 10,
-        name: "quva",
+        name: "Quwa",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372693,
       },
       {
         regionId: 11,
-        name: "quvasoy",
+        name: "Kuvasai",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 169519815,
       },
       {
         regionId: 12,
-        name: "rishton",
+        name: "Rishton",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 246212873,
       },
       {
         regionId: 13,
-        name: "so'x",
+        name: "Soʻx",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 3772474,
       },
       {
         regionId: 14,
-        name: "toshloq",
+        name: "Toshloq",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 247137853,
       },
       {
         regionId: 15,
-        name: "uchko'prik",
+        name: "Uchkoʻprik",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 295886634,
       },
       {
         regionId: 16,
-        name: "o'zbekiston",
+        name: "Uzbekiston",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372733,
       },
       {
         regionId: 17,
-        name: "yozyovon",
+        name: "Yozyowon",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 244655950,
       },
       {
         regionId: 18,
-        name: "qo'qon",
-        type: "district",
-        neighborhood: []
+        name: "Kokand",
+        type: "city",
+        neighborhood: [],
+        region_osm_id: 922525016,
       },
       {
         regionId: 19,
-        name: "marg'ilon",
+        name: "Margilan",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 27143436,
       },
     ]
   },
   {
     respublicId: 10,
-    name: "toshkent",
+    name: "Tashkent",
     type: "region",
     search_detail: {
       osmtype: 'R',
       osmid: 196251,
       coordinates: {
-         lon: 69.3711365,
-         lat: 41.0496815,
-         zoom: 9,
+        lon: 69.3711365,
+        lat: 41.0496815,
+        zoom: 9,
       },
     },
     regions: [
       {
         regionId: 1,
-        name: "oqqo'rg'on",
+        name: "Akkurgan",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 5750388,
       },
       {
         regionId: 2,
-        name: "chirchiq",
+        name: "Chirchiq",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 7723809,
       },
       {
         regionId: 3,
-        name: "ohangaron",
+        name: "Ohangaron",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 5745852,
       },
       {
         regionId: 4,
-        name: "yangiobod",
-        type: "district",
-        neighborhood: []
+        name: "Yangiabod",
+        type: "town",
+        neighborhood: [],
+        region_osm_id: 945415173,
       },
       {
         regionId: 5,
-        name: "angren",
-        type: "district",
-        neighborhood: []
+        name: "Angren",
+        type: "city",
+        neighborhood: [],
+        region_osm_id: 245941430,
       },
       {
         regionId: 6,
-        name: "bekobod",
+        name: "Bekobod",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 5750396,
       },
       {
         regionId: 7,
-        name: "bo'stonliq",
+        name: "Bostanlik",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2120216,
       },
       {
         regionId: 8,
-        name: "bo'ka",
+        name: "Buka",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 48359314,
       },
       {
         regionId: 9,
-        name: "zangiota",
+        name: "Zangiota",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 4060435,
       },
       {
         regionId: 10,
-        name: "qibray",
+        name: "Qibray",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 5745803,
       },
       {
         regionId: 11,
-        name: "parkent",
+        name: "Parkent",
         type: "district",
         neighborhood: [
           {
             id: '11-1',
-            region_name: 'talabuloq',
+            region_name: 'Qiziltog (Krasnogorsk)',
             type: 'qishloq'
           }
-        ]
+        ],
+        region_osm_id: 5745823,
       },
       {
         regionId: 12,
-        name: "olmaliq",
-        type: "district",
-        neighborhood: []
+        name: "Olmaliq",
+        type: "town",
+        neighborhood: [],
+        region_osm_id: 10092921,
       },
       {
         regionId: 13,
-        name: "piskent",
+        name: "Piskent",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 5750391,
       },
       {
         regionId: 14,
-        name: "toshkent",
+        name: "Tashkent",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11071441,
       },
       {
         regionId: 15,
-        name: "nurafshon",
-        type: "district",
-        neighborhood: []
+        name: "Nurafshan (Toytepa)",
+        type: "town",
+        neighborhood: [],
+        region_osm_id: 47228710,
       },
       {
         regionId: 16,
-        name: "o'rtachirchiq",
+        name: "Urtachirchik",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 5748378,
       },
       {
         regionId: 17,
-        name: "chinoz",
+        name: "Chinaz",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 5748414,
       },
       {
         regionId: 18,
-        name: "yuqorichirchiq",
+        name: "Yukorichirchik",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 5745839,
       },
       {
         regionId: 19,
-        name: "yangiyo'l",
-        type: "city",
-        neighborhood: []
+        name: "Yangiiul",
+        type: "town",
+        neighborhood: [],
+        region_osm_id: 7163853,
       },
       {
         regionId: 20,
-        name: "yangiyo'l",
+        name: "Yangiyul",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 5748407,
       },
       {
         regionId: 21,
-        name: "quyichirchiq",
+        name: "Kuyichirchik",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 5748465,
       },
     ]
   },
   {
     respublicId: 1,
-    name: "tashkentsh",
+    name: "Tashkentsh",
     type: "center",
     search_detail: {
       osmtype: 'R',
-      osmid: 309346344,
+      osmid: 2216724,
       coordinates: {
-         lon: 69.274291992,
-         lat: 41.26954950,
-         zoom: 11,
+        lon: 69.274291992,
+        lat: 41.26954950,
+        zoom: 11,
       },
     },
     regions: [
       {
         regionId: 1,
-        name: "chilonzor",
+        name: "Chilanzar",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2441810,
       },
       {
         regionId: 2,
-        name: "uchtepa",
+        name: "Uchtepa",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2434059,
       },
       {
         regionId: 3,
-        name: "olmazor",
+        name: "Olmazor",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2441651,
       },
       {
         regionId: 4,
-        name: "mirzo-ulug'bek",
+        name: "Mirzo Ulugbek",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 5620904,
       },
       {
         regionId: 5,
-        name: "yashnaobod",
+        name: "Yashnabad",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 1751444,
       },
       {
         regionId: 6,
-        name: "mirobod",
+        name: "Mirabad",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2447634,
       },
       {
         regionId: 7,
-        name: "sergeli",
+        name: "Sirgali",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2447546,
       },
       {
         regionId: 8,
-        name: "yangi-hayot",
+        name: "Yangi hayot",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 12030887,
       },
       {
         regionId: 9,
-        name: "yunusobod",
+        name: "Yunusabad",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2448072,
       },
       {
         regionId: 10,
-        name: "yakkasaroy",
+        name: "Yakkasaray",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2443769,
       },
       {
         regionId: 11,
-        name: "shayhontoxur",
+        name: "Shayhontohur",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2439529,
       },
       {
         regionId: 12,
-        name: "bektemir",
+        name: "Bektemir",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2447560,
       }
     ]
   },
   {
     respublicId: 20,
-    name: "sirdaryo",
+    name: "Sirdaryo",
     type: "region",
     search_detail: {
       osmtype: 'R',
       osmid: 196253,
       coordinates: {
-         lon: 68.4341132,
-         lat: 40.3737191,
-         zoom: 9,
+        lon: 68.4341132,
+        lat: 40.3737191,
+        zoom: 9,
       },
     },
     regions: [
       {
         regionId: 1,
-        name: "guliston",
+        name: "Gulistan",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11086478,
       },
       {
         regionId: 2,
-        name: "sirdaryo",
+        name: "Sirdaryo",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11087876,
       },
       {
         regionId: 3,
-        name: "oqoltin",
+        name: "Oqoltin",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11087238      ,
       },
       {
         regionId: 4,
-        name: "boyaut",
+        name: "Boyowut",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11086477,
       },
       {
         regionId: 5,
-        name: "guliston",
+        name: "Guliston",
         type: "district",
         neighborhood: [
           {
@@ -648,181 +733,205 @@ export const republic:IRepublic[] = [
             region_name: "Bahor",
             type: 'aholi-punkti',
           }
-        ]
+        ],
+        region_osm_id: 11087519,
       },
       {
         regionId: 6,
-        name: "xovos",
+        name: "Xovos",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11086994,
       },
       {
         regionId: 7,
-        name: "mirzaobod",
+        name: "Mirzaobod",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11087046,
       },
       {
         regionId: 8,
-        name: "sardoba",
+        name: "Sardoba",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11087239,
       },
       {
         regionId: 9,
-        name: "sayxunobod",
+        name: "Sayxunobod",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11087853,
       },
       {
         regionId: 10,
-        name: "yangiyer",
+        name: "Yangiyer",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11086479,
       },
     ]
   },
   {
     respublicId: 25,
-    name: "jizzax",
+    name: "Jizzakh",
     type: "region",
     search_detail: {
       osmtype: 'R',
       osmid: 196254,
       coordinates: {
-         lon: 67.4551198,
-         lat: 40.3319095,
-         zoom: 9,
+        lon: 67.4551198,
+        lat: 40.3319095,
+        zoom: 9,
       },
     },
     regions: [
       {
         regionId: 1,
-        name: "jizzax",
+        name: "Jizzax",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 173931100,
       },
       {
         regionId: 2,
-        name: "arnasoy",
+        name: "Arnasay",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 6990291,
       },
       {
         regionId: 3,
-        name: "baxmal",
+        name: "Baxmal",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 7587151,
       },
       {
         regionId: 4,
-        name: "do'stlik",
+        name: "Dustlik",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 6990314,
       },
       {
         regionId: 5,
-        name: "forish",
+        name: "Forish",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 7629998,
       },
       {
         regionId: 6,
-        name: "g'allaorol",
+        name: "Gallaorol",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 7592938,
       },
       {
         regionId: 7,
-        name: "sharof-rashidov",
+        name: "Sharof Rashidov",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 7593143,
       },
       {
         regionId: 8,
-        name: "mirzachol",
+        name: "Mirzachul",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 7626174,
       },
       {
         regionId: 9,
-        name: "paxtakor",
+        name: "Pakhtakor",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 7629494,
       },
       {
         regionId: 10,
-        name: "yangiobod",
+        name: "Yangiabad",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 7590755,
       },
       {
         regionId: 11,
-        name: "zomin",
+        name: "Zaamin",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 7587152,
       },
       {
         regionId: 12,
-        name: "zarbdor",
+        name: "Zarbdar",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 7591363,
       },
       {
         regionId: 13,
-        name: "zafarobod",
+        name: "Zafarobod",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 6990287,
       },
     ]
   },
   {
     respublicId: 30,
-    name: "samarqand",
+    name: "Samarqand",
     type: "region",
     search_detail: {
       osmtype: 'R',
       osmid: 196249,
       coordinates: {
-         lon: 66.1282889,
-         lat: 39.7337023,
-         zoom: 9,
+        lon: 66.1282889,
+        lat: 39.7337023,
+        zoom: 9,
       },
     },
     regions: [
       {
         regionId: 1,
-        name: "samarqand",
+        name: "Samarqand",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 245542318,
       },
       {
         regionId: 2,
-        name: "bulung'ur",
+        name: "Bulung`ur",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372728,
       },
       {
         regionId: 3,
-        name: "ishtixon",
+        name: "Ishtixon",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372676,
       },
       {
         regionId: 4,
-        name: "jomboy",
+        name: "Jomboy",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372809,
       },
       {
         regionId: 5,
-        name: "qo'shrabot",
+        name: "Qo‘shrabot",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372760,
       },
       {
         regionId: 6,
-        name: "kattaqorg'on",
+        name: "Kattaqo‘rg‘on",
         type: "district",
         neighborhood: [
           {
@@ -830,47 +939,54 @@ export const republic:IRepublic[] = [
             region_name: "ingichka",
             type: 'qishloq',
           }
-        ]
+        ],
+        region_osm_id: 309372796,
       },
       {
         regionId: 7,
-        name: "narpay",
+        name: "Narpay",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372833,
       },
       {
         regionId: 8,
-        name: "nurobod",
+        name: "Nurobod",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372666,
       },
       {
         regionId: 9,
-        name: "oqdaryo",
+        name: "Oqdaryo",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372723,
       },
       {
         regionId: 10,
-        name: "paxtachi",
+        name: "Paxtachi",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 12474376,
       },
       {
         regionId: 11,
-        name: "poyariq",
+        name: "Payariq",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372820,
       },
       {
         regionId: 12,
-        name: "pastarg'om",
+        name: "Pastdarg‘om",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372667,
       },
       {
         regionId: 13,
-        name: "samarqand",
+        name: "Samarqand",
         type: "district",
         neighborhood: [
           {
@@ -888,421 +1004,491 @@ export const republic:IRepublic[] = [
             "region_name": "kimyogarlar",
             "type": 'qishloq',
           }
-        ]
+        ],
+        region_osm_id: 309372795,
       },
       {
         regionId: 14,
-        name: "tayloq",
+        name: "Toyloq",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372740,
       },
       {
         regionId: 15,
-        name: "urgut",
+        name: "Urgut",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372827,
       },
       {
         regionId: 16,
-        name: "kattaqorg'on",
+        name: "Kattaqo‘rg‘on",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372796,
       },
     ]
   },
   {
     respublicId: 85,
-    name: "navoi",
+    name: "Navoiy",
     type: "region",
     search_detail: {
       osmtype: 'R',
       osmid: 196246,
       coordinates: {
-         lon: 64,
-         lat: 42,
-         zoom: 7,
+        lon: 64,
+        lat: 42,
+        zoom: 7,
       },
     },
     regions: [
       {
         regionId: 1,
-        name: "navoi",
+        name: "Navoiy",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 110282097,
       },
       {
         regionId: 2,
-        name: "kanimex",
+        name: "Kanimekh",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2186085,
       },
       {
         regionId: 3,
-        name: "karmana",
+        name: "Karmana",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11158845,
       },
       {
         regionId: 4,
-        name: "qiziltepa",
+        name: "Qiziltepa",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11158844,
       },
       {
         regionId: 5,
-        name: "xatirchi",
+        name: "Xatirchi",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11158813,
       },
       {
         regionId: 6,
-        name: "navbahor",
+        name: "Navbahor",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11157435,
       },
       {
         regionId: 7,
-        name: "nurota",
+        name: "Nurota",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11158818,
       },
       {
         regionId: 8,
-        name: "tomdi",
+        name: "Tamdy",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2186086,
       },
       {
         regionId: 9,
-        name: "uchquduq",
+        name: "Uchkuduk",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2186087,
       },
       {
         regionId: 10,
-        name: "zarafshon",
-        type: "district",
-        neighborhood: []
+        name: "Zarafshan",
+        type: "city",
+        neighborhood: [],
+        region_osm_id: 195846326,
       },
     ]
   },
   {
     respublicId: 80,
-    name: "buxoro",
+    name: "Bukhara",
     type: "region",
     search_detail: {
       osmtype: 'R',
       osmid: 1670973,
       coordinates: {
-         lon: 63.5470584,
-         lat: 40.229366,
-         zoom: 7,
+        lon: 63.5470584,
+        lat: 40.229366,
+        zoom: 7,
       },
     },
     regions: [
       {
         regionId: 1,
-        name: "buxoro",
+        name: "Bukhara",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 13070474,
       },
       {
         regionId: 2,
-        name: "olot",
+        name: "Olot",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11178494,
       },
       {
         regionId: 3,
-        name: "galaosiyo",
+        name: "Galaosiyo",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 45589946,
       },
       {
         regionId: 4,
-        name: "g'ijduvon",
-        type: "district",
-        neighborhood: []
+        name: "Gijduvan",
+        type: "town",
+        neighborhood: [],
+        region_osm_id: 176098986,
       },
       {
         regionId: 5,
-        name: "jondor",
+        name: "Jondor",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 3587820005,
       },
       {
         regionId: 6,
-        name: "kogon",
+        name: "Kogon",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11177967,
       },
       {
         regionId: 7,
-        name: "qorako'l",
+        name: "Qorako’l",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372672,
       },
       {
         regionId: 8,
-        name: "qorovulbozor",
+        name: "Qorovulbozor",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11159957,
       },
       {
         regionId: 9,
-        name: "peshku",
+        name: "Peshku",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372665,
       },
       {
         regionId: 10,
-        name: "romitan",
+        name: "Romiton",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372714,
       },
       {
         regionId: 11,
-        name: "sharifkon",
+        name: "Shofirkon",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372901,
       },
       {
         regionId: 12,
-        name: "vobkent",
+        name: "Vobkent",
         type: "district",
-        neighborhood: []
-      }
+        neighborhood: [],
+        region_osm_id: 309372692,
+      },
+      {
+        regionId: 13,
+        name: "Bukhoro",
+        type: "district",
+        neighborhood: [],
+        region_osm_id: 11180733,
+      },
     ]
   },
   {
     respublicId: 90,
-    name: "xorazm",
+    name: "Xorazm",
     type: "region",
     search_detail: {
       osmtype: 'R',
       osmid: 196242,
       coordinates: {
-         lon: 61.1636,
-         lat: 41.2902835,
-         zoom: 9,
+        lon: 61.1636,
+        lat: 41.2902835,
+        zoom: 9,
       },
     },
     regions: [
       {
         regionId: 1,
-        name: "urganch",
+        name: "Urgench",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 110132970,
       },
       {
         regionId: 2,
-        name: "xiva",
-        type: "city",
-        neighborhood: []
+        name: "Khiva",
+        type: "town",
+        neighborhood: [],
+        region_osm_id: 110260748,
       },
       {
         regionId: 3,
-        name: "bog'ot",
+        name: "Bagat",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2097711,
       },
       {
         regionId: 4,
-        name: "gurlan",
+        name: "Gurlen",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2097623,
       },
       {
         regionId: 5,
-        name: "qo'shko'pir",
+        name: "Koshkupyr",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2097689,
       },
       {
         regionId: 6,
-        name: "urganch",
+        name: "Urgench",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2097690,
       },
       {
         regionId: 7,
-        name: "xazorasp",
+        name: "Hazorasp",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2097814,
       },
       {
         regionId: 8,
-        name: "xonqa",
+        name: "Khanka",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2097712,
       },
       {
         regionId: 9,
-        name: "xiva",
+        name: "Khiva",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2097691,
       },
       {
         regionId: 10,
-        name: "shovot",
+        name: "Shavat",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2097624,
       },
       {
         regionId: 11,
-        name: "yangiariq",
+        name: "Yangiariq",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2097692,
       },
       {
         regionId: 12,
-        name: "yangibozor",
+        name: "Yangibozor",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2097625,
       },
       {
         regionId: 13,
-        name: "pitnak",
-        type: "city",
-        neighborhood: []
+        name: "Pitnak",
+        type: "town",
+        neighborhood: [],
+        region_osm_id: 394570342,
+      },
+      {
+        regionId: 14,
+        name: "Tuproqqalʼa",
+        type: "county",
+        neighborhood: [],
+        region_osm_id: 11992833,
       },
     ]
   },
   {
     respublicId: 95,
-    name: "qoraqalpog'iston",
+    name: "Karakalpakstan",
     type: "respublic",
     search_detail: {
       osmtype: 'R',
       osmid: 196241,
       coordinates: {
-         lon: 57.6234617,
-         lat: 43.7738841,
-         zoom: 7,
+        lon: 57.6234617,
+        lat: 43.7738841,
+        zoom: 7,
       },
     },
     regions: [
       {
         regionId: 1,
-        name: "nukus",
+        name: "Nókis",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 7284011,
       },
       {
         regionId: 2,
-        name: "amudaryo",
+        name: "Ámiwdárya",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2095807,
       },
       {
         regionId: 3,
-        name: "beruniy",
+        name: "Beruniy",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2095997,
       },
       {
         regionId: 4,
-        name: "buzatau'",
+        name: "Bozatau'",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 10041797,
       },
       {
         regionId: 5,
-        name: "qanliko'l",
+        name: "Qanlıkól",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2094502,
       },
       {
         regionId: 6,
-        name: "qorao'zak",
+        name: "Qaraózek",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2095797,
       },
       {
         regionId: 7,
-        name: "kegeyli",
+        name: "Kegeyli",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2095788,
       },
       {
         regionId: 8,
-        name: "qo'ng'irot",
+        name: "Qońırat",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2094349,
       },
       {
         regionId: 9,
-        name: "mo'ynoq",
+        name: "Muynoq",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2094483,
       },
       {
         regionId: 10,
-        name: "nukus",
+        name: "Nókis",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 7284021,
       },
       {
         regionId: 11,
-        name: "taxiatash",
+        name: "Taqıyatas",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 7505068,
       },
       {
         regionId: 12,
-        name: "taxtakopir",
+        name: "Taxtakopir",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2095849,
       },
       {
         regionId: 13,
-        name: "to'rtko'l",
+        name: "Tórtkúl",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2095998,
       },
       {
         regionId: 14,
-        name: "xo'jayli",
+        name: "Xojeli",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2094524,
       },
       {
         regionId: 15,
-        name: "chimboy",
+        name: "Chimbay",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2095789,
       },
       {
         regionId: 16,
-        name: "shumanay",
+        name: "Shomanay",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2094497,
       },
       {
         regionId: 17,
-        name: "ellikqala",
+        name: "Ellikqala",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 2095999,
       },
     ]
   },
   {
     respublicId: 70,
-    name: "qashqadaryo",
+    name: "Qashqadaryo",
     type: "region",
     search_detail: {
       osmtype: 'R',
       osmid: 1670974,
       coordinates: {
-         lon: 66.192626,
-         lat: 38.5639397,
-         zoom: 9,
+        lon: 66.192626,
+        lat: 38.5639397,
+        zoom: 9,
       },
     },
     regions: [
       {
         regionId: 1,
-        name: "qarshi",
+        name: "Qarshi",
         type: "city",
         neighborhood: [
           {
@@ -1310,203 +1496,227 @@ export const republic:IRepublic[] = [
             "region_name": "sheyxali",
             "type": 'qishloq',
           }
-        ]
+        ],
+        region_osm_id: 228236278,
       },
       {
         regionId: 2,
-        name: "qarshi",
+        name: "Qarshi",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 13618732,
       },
       {
         regionId: 3,
-        name: "chiroqchi",
+        name: "Chirakchi",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 13342290,
       },
       {
         regionId: 4,
-        name: "dexqonobod",
+        name: "Dehqonobod",// check again
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372773,
       },
       {
         regionId: 5,
-        name: "g'uzor",
+        name: "G’uzor",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372773,
       },
       {
         regionId: 6,
-        name: "qamashi",
+        name: "Kamashi",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 9037690,
       },
       {
         regionId: 7,
-        name: "koson",
+        name: "Koson",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372747,
       },
       {
         regionId: 8,
-        name: "kasbiy",
+        name: "Kasbi",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11856183,
       },
       {
         regionId: 9,
-        name: "kitob",
+        name: "Kitob",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 8655517,
       },
       {
         regionId: 10,
-        name: "mirishkor",
+        name: "Mirishkor",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11857775,
       },
       {
         regionId: 11,
-        name: "muborak",
+        name: "Muborak",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372767,
       },
       {
         regionId: 12,
-        name: "nishon",
+        name: "Nishon",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 10764730,
       },
       {
         regionId: 13,
-        name: "shaxrisabz",
+        name: "Shakhrisabz",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 8660162,
       },
       {
         regionId: 14,
-        name: "yakkabog",
+        name: "Yakkabog",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 8827580,
       },
       {
         regionId: 15,
-        name: "kukdali",
-        type: "district",
-        neighborhood: []
-      },
-      {
-        regionId: 16,
-        name: "shaxrisabz",
+        name: "Shahrisabz",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 309372759,
       },
     ]
   },
   {
     respublicId: 75,
-    name: "surxondaryo",
+    name: "Surxondaryo",
     type: "region",
     search_detail: {
       osmtype: 'R',
       osmid: 196248,
       coordinates: {
-         lon: 67.510986,
-         lat: 37.9520843,
-         zoom: 9,
+        lon: 67.510986,
+        lat: 37.9520843,
+        zoom: 9,
       },
     },
     regions: [
       {
         regionId: 1,
-        name: "termiz",
+        name: "Termez",
         type: "city",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 245557356,
       },
       {
         regionId: 2,
-        name: "qumqurgon",
+        name: "Kumkurghon",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11123658,
       },
       {
         regionId: 3,
-        name: "termez",
+        name: "Termiz",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11137520,
       },
       {
         regionId: 4,
-        name: "denov",
+        name: "Denov",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11180683,
       },
       {
         regionId: 5,
-        name: "uzun",
+        name: "Uzun",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11180857,
       },
       {
         regionId: 6,
-        name: "sariosiyo",
+        name: "Sariosiyo",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11114152,
       },
       {
         regionId: 7,
-        name: "boysun",
+        name: "Boysun",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11114153,
       },
       {
         regionId: 8,
-        name: "sherobod",
+        name: "Sherabad",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11184260,
       },
       {
         regionId: 9,
-        name: "shurchi",
+        name: "Shurchi",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11180731,
       },
       {
         regionId: 10,
-        name: "angor",
+        name: "Angor",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11184154,
       },
       {
         regionId: 11,
-        name: "jarqo'rg'on",
+        name: "Jarkurgan",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11184121,
       },
       {
         regionId: 12,
-        name: "muzrobod",
+        name: "Muzrabot",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11184259,
       },
       {
         regionId: 13,
-        name: "qiziriq",
+        name: "Kizirik",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11184007,
       },
       {
         regionId: 14,
-        name: "bandixon",
+        name: "Bandikhon",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11183885,
       },
       {
         regionId: 15,
-        name: "oltinsoy",
+        name: "Oltinsoy",
         type: "district",
-        neighborhood: []
+        neighborhood: [],
+        region_osm_id: 11149913,
       },
     ]
   },

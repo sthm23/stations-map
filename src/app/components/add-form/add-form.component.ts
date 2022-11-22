@@ -3,7 +3,7 @@ import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { IAtcData } from 'src/app/models/interfaces';
 import { LocationIconService } from 'src/app/services/location-icon.service';
 import { MapComponent } from '../map/map.component';
-
+import {republic} from '../filter/allRespublicNameToFilter';
 @Component({
   selector: 'app-add-form',
   templateUrl: './add-form.component.html',
@@ -12,19 +12,19 @@ import { MapComponent } from '../map/map.component';
 export class AddFormComponent implements OnInit, OnChanges {
   @Output() onAddFormShow = new EventEmitter<boolean>();
   @Input() location:any;
-  map:any;
+  formStatus = true
   form!: FormGroup;
   formAtc:any = [];
-  clickedIconId = '';
   station!:IAtcData;
 
-  constructor(private requestApi: LocationIconService, private mapComp: MapComponent) {}
+  constructor(private requestApi: LocationIconService, private mapComp: MapComponent) {  }
 
   ngOnChanges(changes: SimpleChanges): void {
     const {location} = changes;
-    console.log(changes);
+    // console.log(changes);
 
     if(location.previousValue) {
+      this.formStatus = false;
       this.form.reset();
       this.updateForm();
     }
@@ -32,9 +32,9 @@ export class AddFormComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-
+    this.formStatus = false;
     this.form = new FormGroup({
-      town: new FormControl('', [Validators.required]),
+      town: new FormControl(null, [Validators.required]),
       work: new FormControl(true, Validators.requiredTrue),
       cabel: new FormGroup({
         amount: new FormControl(null, Validators.required),
@@ -49,22 +49,35 @@ export class AddFormComponent implements OnInit, OnChanges {
       }),
       address: new FormControl('', Validators.required)
     });
-
     this.updateForm();
   }
 
   updateForm() {
     const address$ = this.requestApi.getAddress(this.location.lat, this.location.lng);
     address$.subscribe((obs:any)=> {
+      let region:any;
       // console.log(obs);
+      if(obs.error === 'Unable to geocode') {
+        return
+      }
+      if (obs.address.city === "Tashkent" || (obs.address.county === 'Qibray district' && obs.address.town === 'Ulughbek')) {
+        region = republic.find(item => item.name === 'Tashkentsh')
+      } else if(obs.address.region === 'Sirdaryo Region' || obs.address.region === 'Namangan Region') {
+        region = republic.find(item => obs.address.region.includes(item.name))
+      } else {
+        region = republic.find(item => obs.address.state.includes(item.name))
+      }
+      // console.log({...obs?.address, id: obs?.osm_id, type: obs?.osm_type, display_name: obs.display_name})
+
       this.station = {
         town: '',
         atc: [''],
         address: {
           display_name: obs.display_name,
-          osm_id: obs.osm_id,
+          country_osm_id: obs.osm_id,
+          ...obs.address,
           osm_type: obs.osm_type,
-          ...obs.address
+          osm_id: region?.search_detail.osmid,
         },
         location: [this.location.lat.toFixed(4), this.location.lng.toFixed(4)],
         cabel:{
@@ -80,6 +93,9 @@ export class AddFormComponent implements OnInit, OnChanges {
   }
 
   submit() {
+    if(this.form.valid){
+
+
     const formData:IAtcData = {
       ...this.form.value,
       address: this.station.address,
@@ -99,6 +115,11 @@ export class AddFormComponent implements OnInit, OnChanges {
           console.log(s);
         }
       })
+    }else{
+
+      console.log('invalid');
+    }
+
   }
 
   addAtc() {
@@ -114,6 +135,7 @@ export class AddFormComponent implements OnInit, OnChanges {
     atcArrValue.value.splice(id, 1);
   }
   closeForm() {
+    this.formStatus = true;
     this.onAddFormShow.emit(false);
   }
 

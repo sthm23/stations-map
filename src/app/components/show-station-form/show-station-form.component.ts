@@ -69,25 +69,30 @@ export class ShowStationFormComponent implements OnInit, OnChanges {
 
   submit() {
 
-    const formData:IAtcData = {
-      ...this.form.value,
-      address: this.formItem.station.address,
-      location: [this.form.value.location.lang, this.form.value.location.lat],
-    };
+    if(this.form.valid){
+      const formData:IAtcData = {
+        ...this.form.value,
+        address: this.formItem.station.address,
+        location: [this.form.value.location.lang, this.form.value.location.lat],
+      };
 
-    const id = this.formItem.station['_id'];
-    this.requestApi.updateLocation(id, formData)
-    .subscribe((s: any)=> {
-      if(s.ok === 1) {
-        this.formItem.markers[id].remove();
-        this.formItem.markers[id] = this.mapComp.pastMarker(formData, this.mapComp.map);
+      const id = this.formItem.station['_id'];
+      this.requestApi.updateLocation(id, formData)
+      .subscribe((s: any)=> {
+        if(s.ok === 1) {
+          this.formItem.markers[id].remove();
+          this.formItem.markers[id] = this.mapComp.pastMarker(formData, this.mapComp.map);
 
-        this.form.reset();
-        this.closeForm();
-      }else {
-        console.log(s);
-      }
-    });
+          this.form.reset();
+          this.closeForm();
+        }else {
+          console.log(s);
+        }
+      });
+    }else {
+      console.log('invalid');
+
+    }
 
 
   }

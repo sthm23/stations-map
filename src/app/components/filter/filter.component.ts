@@ -22,20 +22,20 @@ export class FilterComponent implements OnInit {
   selectValue!: string;
   regionBlock= false;
   regions: Region[] = [
-    {value: 'tashkentsh', viewValue: 'г.Ташкент'},
-    {value: 'toshkent', viewValue: 'Ташкент обл'},
-    {value: 'andijon', viewValue: 'Андижан'},
-    {value: "farg'ona", viewValue: 'Фергана'},
-    {value: 'namangan', viewValue: 'Наманган'},
-    {value: 'jizzax', viewValue: 'Джиззак'},
-    {value: 'sirdaryo', viewValue: 'Сирдарё'},
-    {value: 'samarqand', viewValue: 'Самарканд'},
-    {value: 'navoi', viewValue: 'Навои'},
-    {value: 'buxoro', viewValue: 'Бухоро'},
-    {value: 'xorazm', viewValue: 'Хоразм'},
-    {value: "qoraqalpog'iston", viewValue: 'Каракалпакстан Респ'},
-    {value: 'qashqadaryo', viewValue: 'Кашкадарё'},
-    {value: 'surxondaryo', viewValue: 'Сурхандарё'},
+    {value: 'Tashkentsh', viewValue: 'г.Ташкент'},
+    {value: 'Tashkent', viewValue: 'Ташкент обл'},
+    {value: 'Andijan', viewValue: 'Андижан'},
+    {value: "Fergana", viewValue: 'Фергана'},
+    {value: 'Namangan', viewValue: 'Наманган'},
+    {value: 'Jizzakh', viewValue: 'Джиззак'},
+    {value: 'Sirdaryo', viewValue: 'Сирдарё'},
+    {value: 'Samarqand', viewValue: 'Самарканд'},
+    {value: 'Navoiy', viewValue: 'Навои'},
+    {value: 'Bukhara', viewValue: 'Бухоро'},
+    {value: 'Xorazm', viewValue: 'Хоразм'},
+    {value: "Karakalpakstan", viewValue: 'Каракалпакстан Респ'},
+    {value: 'Qashqadaryo', viewValue: 'Кашкадарё'},
+    {value: 'Surxondaryo', viewValue: 'Сурхандарё'},
     {value: 'all', viewValue: 'Все регионы'},
   ];
   districts!:regions[];
@@ -63,6 +63,10 @@ export class FilterComponent implements OnInit {
 
   submit() {
     const region = republic.find(item => item.name === this.selectValue);
+
+    // region?.regions.filter((item, ind)=>item.)
+    // console.log(region);
+
     const search_detail:ISearch = {...region?.search_detail!};
     const obj:RegionsEmitObj = {
       id: region?.respublicId,
@@ -77,13 +81,15 @@ export class FilterComponent implements OnInit {
 
       for (const key in this.toppings.value) {
         if(this.toppings.value[key]){
-          const dist:regions = (region.regions as regions[]).find(item=> item.name+item.type === key)!;
-          console.log(dist);
-          (obj.dist as regions[]).push(dist);
+          const dist:regions | undefined = (region.regions as regions[]).find(item=> (item.name+item.type) === key);
+          // console.log(dist);
+          if(dist !== undefined){
+            (obj.dist as regions[]).push(dist);
+          }
         }
       }
       // console.log(this.toppings);
-
+      // console.log(obj);
       this.onRegionFilter.emit(obj);
     }
 

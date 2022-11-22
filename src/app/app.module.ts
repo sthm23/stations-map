@@ -38,7 +38,7 @@ import { FilterComponent } from './components/filter/filter.component';
     MapClickDirective,
     ShowStationFormComponent,
     AddFormComponent,
-    FilterComponent
+    FilterComponent,
   ],
   imports: [
     BrowserModule,

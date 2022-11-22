@@ -2,7 +2,7 @@
     <form class="form" [formGroup]="form" (ngSubmit)="submit()">
       <div class="form-header">
         <h2 class="title">Добавить данные:</h2>
-        <button type="button" class="close" (click)="closeForm()" appMapClick>&times;</button>
+        <button type="button" class="close" (click)="closeForm()" >&times;</button>
       </div>
       <div class="form-body">
         <div class="form-station-name-block">
@@ -62,7 +62,7 @@
 
       </div>
       <div class="btn-block">
-        <button type="submit" class="submit">Добавить</button>
+        <button type="submit" class="submit" [disabled]="!form.valid">Добавить</button>
       </div>
     </form>
 
