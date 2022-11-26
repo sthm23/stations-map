@@ -2,11 +2,8 @@ import { LocationIconService } from './../../services/location-icon.service';
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 import { IAtcData } from 'src/app/models/interfaces';
-import { allRegions } from 'src/app/data/regions/allRegions';
-import { allDistrict } from 'src/app/data/regions/allDistrict';
 import { RegionsEmitObj } from '../filter/filter.component';
-import { uzb } from 'src/app/data/regions/uzb';
-
+import { RegionsService } from 'src/app/services/regions.service';
 
 @Component({
   selector: 'app-map',
@@ -14,6 +11,7 @@ import { uzb } from 'src/app/data/regions/uzb';
   styleUrls: ['./map.component.css'],
 })
 export class MapComponent implements OnInit {
+  uzb:any;
   filterBlock = false;
   markers:IAtcData[] = []
   markersObj:any = {}
@@ -25,15 +23,20 @@ export class MapComponent implements OnInit {
   addFormLocation!:L.LatLng;
 
   constructor(
-    private requestApi: LocationIconService,
-  ) {  }
+    private locationApi: LocationIconService,
+    private regionServ: RegionsService
+  ) {
+
+  }
 
   ngOnInit(): void {
     this.map = this.drowMap();
     this.drowMapInfo(this.map);
-    const uzbMap = this.sortRegions();
-
-    this.allRegionLayer = this.drowRegionsInMap(uzb, this.map);
+    this.regionServ.getUzbMap()
+      .subscribe(uzb=>{
+        this.uzb = uzb;
+        this.allRegionLayer = this.drowRegionsInMap(uzb, this.map);
+      })
     this.generateMarkers(this.map);
 
     this.map.on('click', (e) => {
@@ -68,12 +71,6 @@ export class MapComponent implements OnInit {
     }).addTo(map);
   }
 
-  sortRegions() {
-    return allRegions.map(item => {
-      return item.mapIn
-    }).filter((item: any ) => item.geometry !== null);
-  }
-
   drowRegionsInMap(uzbMap: any, map: any) {
     return L.geoJSON(uzbMap, {
       style: this.mapRegionInlineColor
@@ -86,12 +83,11 @@ export class MapComponent implements OnInit {
       color: "#4a4a4a",
     }
   }
-
+  testArr:IAtcData[] = []
   addMarkersToMap(map:any, arr:IAtcData[]) {
     for (let i = 0; i < arr.length; i++) {
       const icon:IAtcData = arr[i];
       const id = icon['_id'];
-
       // Create and save a reference to each marker
       const station: any = this.pastMarker(icon, map) //.bindPopup(answerObj.answer);
       station['_icon'].setAttribute('id', id);
@@ -125,7 +121,7 @@ export class MapComponent implements OnInit {
 
 
   generateMarkers(map:any) {
-    const stationArr = this.requestApi.getLocation();
+    const stationArr = this.locationApi.getLocation();
 
     stationArr.subscribe(atc => {
       this.markers = atc
@@ -141,46 +137,54 @@ export class MapComponent implements OnInit {
     this.showAddForm = e;
   }
 
+  addStation(e:any){
+    this.markersObj[e.id] = e.station as any;
+  }
+
   filterRegion(e:RegionsEmitObj) {
     // console.log(e);
-    let regionMap:any;
-    let location!:IAtcData[];
+    let location:IAtcData[];
     if(e.id){
       this.map.setView([+e.search_detail.coordinates.lat, +e.search_detail.coordinates.lon], +e.search_detail.coordinates.zoom)
       if(e.dist.length === 0) {
-        location = this.markers.filter(item=> +(item.address as any)['osm_id'] === e.search_detail.osmid);
+        location = this.markers
+          .filter(item=> +(item.address as any)['osm_id'] === e.search_detail.osmid);
 
-        regionMap = allRegions.filter(item=> item.id === e.id)
-        .map(item => {
-          return item.mapIn
-        }).filter((item: any ) => item.geometry !== null);
+        this.regionServ.getOneRegion(e.id)
+          .subscribe(regions=>{
+            this.renderLine(regions, location);
+          })
+
       } else {
-        const region = allDistrict.find(item => item.id === e.id);
-        regionMap = region?.regions
-          .filter(item => e.dist.some(el=> el.regionId === item.id))
-            .map(item => item.map_in);
+        location = this.markers
+          .filter(item=> +(item.address as any)['osm_id'] === e.search_detail.osmid)
+            .filter(item=> e.dist
+                .some(el=> {
+                  const distAdress = (item.address?.display_name.toLowerCase() as string)
+                  return item.address?.country_osm_id === el.region_osm_id
+                  // || distAdress.includes(el.name.toLowerCase());
+                }));
 
-            location = this.markers.filter(item=> +(item.address as any)['osm_id'] === e.search_detail.osmid)
-              .filter(item=> e.dist.some(el=> (item.address?.display_name.toLowerCase() as string).includes(el.name.toLowerCase())));
+          const dist_id = e.dist.map(item=> item.regionId)
+          this.regionServ.getDistricts(e.id, dist_id).
+            subscribe(dist=>{
+              this.renderLine(dist, location);
+            })
       }
     } else {
       this.map.setView([40.191818, 63.564393], 6)
-      regionMap = allRegions.map((item) => {
-        return item.mapIn
-      }).filter((item: any ) => item.geometry !== null);
-      location = this.markers
+      this.renderLine(this.uzb, this.markers);
     }
+  }
 
+  renderLine(regionMap:any, location:IAtcData[]){
     this.markers.forEach(item=>{
       const id = item._id;
       this.markersObj[id].remove()
     })
-    // console.log('location', location);
-    // console.log('filter', e);
     this.allRegionLayer.remove();
     this.allRegionLayer = this.drowRegionsInMap(regionMap, this.map);
     this.addMarkersToMap(this.map, location)
-
   }
 
 }

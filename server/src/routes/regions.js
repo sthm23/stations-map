@@ -1,114 +1,72 @@
 /* eslint-disable consistent-return */
 const express = require('express');
-const schema = require('../db/schema');
+const schema = require('../db/schemaForRegions');
 const db = require('../db/connection');
 
-const regions = db //.get('regions');
+const regions = db.get('regions');
 
 const router = express.Router();
 
-/* Get all stations */
+/* Get all regions */
 router.get('/', async (req, res, next) => {
   try {
     const allRegions = await regions.find({});
-    res.json(allRegions);
+    const result = allRegions.map(item=>item.map_in);
+    res.json(result);
   } catch (error) {
     next(error);
   }
 });
 
-// /* Get a specific station */
-// router.get('/:id', async (req, res, next) => {
-//   try {
-//     const { id } = req.params;
-//     const station = await stations.findOne({
-//       _id: id,
-//     });
+/* Get one region */
+router.get('/:region_id', async (req, res, next) => {
+  try {
+    const { region_id } = req.params;
+    const region = await regions.findOne({
+      id: +region_id,
+    });
 
-//     if (!station) {
-//       const error = new Error('station does not exist');
-//       return next(error);
-//     }
+    if (!region) {
+      const error = new Error('region does not exist');
+      return next(error);
+    }
+    const result = region.map_in
+    res.json(result);
+  } catch (error) {
+    next(error);
+  }
+});
 
-//     res.json(station);
-//   } catch (error) {
-//     next(error);
-//   }
-// });
+/* get region's districts */
+router.post('/:region_id', async (req, res, next) => {
+  try {
+    const obj = req.body;
+    const {region_id} = req.params;
+    await schema.validateAsync(obj);
 
-// /* Create a new station */
-// router.post('/', async (req, res, next) => {
-//   try {
-//     const obj = req.body;
-//     await schema.validateAsync(obj);
+    const region = await regions.findOne({
+      id: +region_id,
+    });
 
-//     const station = await stations.findOne({
-//       town: obj.town,
-//     });
+    // region not fount;
+    if (!region) {
+      const error = new Error('region not found');
+      return next(error);
+    }
 
-//     // station already exists
-//     if (station) {
-//       const error = new Error('station already exists');
-//       res.status(409); // conflict error
-//       return next(error);
-//     }
+    const result = region.regions
+          .filter(item=> obj.dist.some(el=> +el === +item.id))
+            .map(reg=>reg.map_in);
+    if(result.length !== 0){
+      res.json(result)
+    } else {
+      const error = new Error('dist not found');
+      next(error);
+    }
 
-//     const newuser = await stations.insert(obj);
-
-//     res.status(201).json(newuser);
-//   } catch (error) {
-//     next(error);
-//   }
-// });
-
-// /* Update a specific station */
-// router.put('/:id', async (req, res, next) => {
-//   try {
-//     const { id } = req.params;
-//     const obj = req.body;
-//     const result = await schema.validateAsync(obj);
-//     const station = await stations.findOne({
-//       _id: id,
-//     });
-
-//     // station does not exist
-//     if (!station) {
-//       return next();
-//     }
-
-//     const updatedStation = await stations.update({
-//       _id: id,
-//     }, { $set: result },
-//     { upsert: true });
-
-//     res.json(updatedStation);
-//   } catch (error) {
-//     next(error);
-//   }
-// });
-
-// /* Delete a specific station */
-// router.delete('/:id', async (req, res, next) => {
-//   try {
-//     const { id } = req.params;
-//     const station = await stations.findOne({
-//       _id: id,
-//     });
-
-//     // station does not exist
-//     if (!station) {
-//       return next();
-//     }
-//     await stations.remove({
-//       _id: id,
-//     });
-
-//     res.json({
-//       message: 'station has been deleted',
-//     });
-//   } catch (error) {
-//     next(error);
-//   }
-// });
+  } catch (error) {
+    next(error);
+  }
+});
 
 module.exports = router;

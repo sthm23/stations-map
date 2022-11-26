@@ -8,6 +8,7 @@ export interface IAtcData {
     osm_id: number,
     display_name: string,
     county: string,
+    country_osm_id: number,
   },
   location: string[],
   work: boolean,
@@ -19,4 +20,4 @@ export interface IAtcData {
   }
 }
 // export const baseUrl = 'https://basestationsmapserver.herokuapp.com/api/stations';
-export const baseUrl = 'http://localhost:5000/api/stations';
+// export const baseUrl = 'http://localhost:5000/api/stations';

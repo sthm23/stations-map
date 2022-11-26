@@ -2,7 +2,9 @@
     <form class="form" [formGroup]="form" (ngSubmit)="submit()">
       <div class="form-header">
         <h2 class="title">Добавить данные:</h2>
-        <button type="button" class="close" (click)="closeForm()" >&times;</button>
+        <button type="button" class="close" appMapClick (click)="closeForm()" >
+          <mat-icon>close icon</mat-icon>
+        </button>
       </div>
       <div class="form-body">
         <div class="form-station-name-block">
@@ -50,12 +52,16 @@
         </div>
 
         <div  class="form-station-atc-block-parent" formGroupName="atc">
-          <button class="add-btn" type="button" (click)="addAtc()">add atc</button>
+          <button class="add-btn" type="button" (click)="addAtc()">
+            <mat-icon>add_circle</mat-icon>
+          </button>
           <div class="atc-temp-block" *ngFor="let item of formAtc; let ind = index">
             <h5 class="atc-name">Stansiyadagi qurilma nomi:</h5>
             <div class="add-block">
                 <input type="text" placeholder="Example ATC" [formControlName]="ind">
-                <button class="remove-btn" type="button" (click)="removeAtc(ind)">-</button>
+                <button class="remove-btn" type="button" (click)="removeAtc(ind)">
+                  <mat-icon>backspace</mat-icon>
+                </button>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@
   position: relative;
   left: 0;
   top: 0;
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
   max-width: 100%;
   overflow: hidden;
@@ -106,7 +106,8 @@
   left: 50%;
   bottom: 0;
   z-index: 100;
-  border: none;
+  border: 1px solid #c5c5c5;
+  /* border: none; */
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s;

@@ -13,7 +13,7 @@ input{
   font-family: 'Poppins', sans-serif;
   margin: 5px;
 }
-button{
+/* button{
   width: 15px;
   height: 15px;
   border-radius: 12px;
@@ -23,7 +23,7 @@ button{
   justify-content: center;
   background-color: aliceblue;
   cursor: pointer;
-}
+} */
 .submit, .remove{
   width: 120px;
   height: 32px;
@@ -39,44 +39,55 @@ transition: 0.4s all;
 }
 .remove{
   background-color: rgb(222, 19, 19);
-  border: 2px solid rgb(93, 17, 17);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
   color: aliceblue;
   transition: 0.4s all;
 }
 .submit{
   background-color: rgb(40, 162, 38);
-  border: 2px solid green;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
   color: aliceblue;
   transition: 0.4s all;
 }
 
 .add-btn{
-  width: 70px;
-  height: 20px;
-  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(40, 162, 38);
+  background: transparent;
+  border: none;
+  cursor: pointer;
   align-self: flex-end;
 
 }
 .remove-btn{
-  font-size: 20px;
-  width: 18px;
-  height: 18px;
-  background-color: #8e1111;
-  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ca3333;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 .close{
-  width: 20px;
-  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
+
 .close:hover{
-  background-color: #a6a6a7;
+  color: #1B6FCE;
 }
 form {
   border: 1px solid whitesmoke;
   padding: 14px;
-  background: linear-gradient(180deg, #558FEE 0%, #3CB3F1 100%);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 9px;
-  /* margin: 0 auto; */
   width: 30vw;
   display: flex;
   align-items: center;

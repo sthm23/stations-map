@@ -11,7 +11,8 @@ export class LocationIconService {
   // addressUrl = 'https://nominatim.openstreetmap.org/reverse?'
 
   // url = 'http://localhost:5000/api/stations'
-  url = 'https://basestationsmapserver.herokuapp.com/api/stations';
+  url = 'http://185.74.5.173/api/stations'
+  // url = 'https://basestationsmapserver.herokuapp.com/api/stations';
   constructor(private http: HttpClient) { }
 
   getLocation():Observable<IAtcData[]> {

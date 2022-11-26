@@ -11,20 +11,33 @@ import {republic} from '../filter/allRespublicNameToFilter';
 })
 export class AddFormComponent implements OnInit, OnChanges {
   @Output() onAddFormShow = new EventEmitter<boolean>();
+  @Output() onCreatStation = new EventEmitter<any>();
   @Input() location:any;
-  formStatus = true
-  form!: FormGroup;
+  form: FormGroup = new FormGroup({
+    town: new FormControl(null, [Validators.required]),
+    work: new FormControl(true, Validators.requiredTrue),
+    cabel: new FormGroup({
+      amount: new FormControl(null, Validators.required),
+      busy: new FormControl(null, Validators.required),
+      empty: new FormControl(null, Validators.required),
+      length: new FormControl(null, Validators.required),
+    }),
+    atc: new FormArray([]),
+    location: new FormGroup({
+      lang: new FormControl('', Validators.required),
+      lat: new FormControl('', Validators.required)
+    }),
+    address: new FormControl('', Validators.required)
+  });
   formAtc:any = [];
   station!:IAtcData;
 
-  constructor(private requestApi: LocationIconService, private mapComp: MapComponent) {  }
+  constructor(private locationApi: LocationIconService, private mapComp: MapComponent) {  }
 
   ngOnChanges(changes: SimpleChanges): void {
     const {location} = changes;
-    // console.log(changes);
 
     if(location.previousValue) {
-      this.formStatus = false;
       this.form.reset();
       this.updateForm();
     }
@@ -32,31 +45,14 @@ export class AddFormComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-    this.formStatus = false;
-    this.form = new FormGroup({
-      town: new FormControl(null, [Validators.required]),
-      work: new FormControl(true, Validators.requiredTrue),
-      cabel: new FormGroup({
-        amount: new FormControl(null, Validators.required),
-        busy: new FormControl(null, Validators.required),
-        empty: new FormControl(null, Validators.required),
-        length: new FormControl(null, Validators.required),
-      }),
-      atc: new FormArray([]),
-      location: new FormGroup({
-        lang: new FormControl('', Validators.required),
-        lat: new FormControl('', Validators.required)
-      }),
-      address: new FormControl('', Validators.required)
-    });
     this.updateForm();
   }
 
   updateForm() {
-    const address$ = this.requestApi.getAddress(this.location.lat, this.location.lng);
+    const address$ = this.locationApi.getAddress(this.location.lat, this.location.lng);
     address$.subscribe((obs:any)=> {
       let region:any;
-      // console.log(obs);
+      console.log(obs);
       if(obs.error === 'Unable to geocode') {
         return
       }
@@ -102,13 +98,14 @@ export class AddFormComponent implements OnInit, OnChanges {
       location: this.station.location,
     }
 
-    this.requestApi.addLocation(formData)
+    this.locationApi.addLocation(formData)
       .subscribe(s=> {
         if(s._id){
           const id = s['_id'];
           const station:any = this.mapComp.pastMarker(s, this.mapComp.map);
           station['_icon'].setAttribute('id', id);
-          this.mapComp.markersObj[id] = station as any;
+          this.onCreatStation.emit({station, id});
+          // this.mapComp.markersObj[id] = station as any;
           this.form.reset();
           this.closeForm();
         }else {
@@ -135,7 +132,6 @@ export class AddFormComponent implements OnInit, OnChanges {
     atcArrValue.value.splice(id, 1);
   }
   closeForm() {
-    this.formStatus = true;
     this.onAddFormShow.emit(false);
   }
 

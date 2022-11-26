@@ -12,7 +12,22 @@ import { MapComponent } from '../map/map.component';
 export class ShowStationFormComponent implements OnInit, OnChanges {
   @Input() formItem!:{station: IAtcData, markers: any};
   @Output() onShowForm: EventEmitter<boolean> = new EventEmitter<boolean>()
-  form!: FormGroup;
+  form: FormGroup = new FormGroup({
+    town: new FormControl('', [Validators.required]),
+    work: new FormControl('', Validators.requiredTrue),
+    cabel: new FormGroup({
+      amount: new FormControl(null, Validators.required),
+      busy: new FormControl(null, Validators.required),
+      empty: new FormControl(null, Validators.required),
+      length: new FormControl(null, Validators.required),
+    }),
+    atc: new FormArray([]),
+    location: new FormGroup({
+      lang: new FormControl('', Validators.required),
+      lat: new FormControl('', Validators.required)
+    }),
+    address: new FormControl('', Validators.required)
+  });
   formAtc:any = [];
 
   constructor(private requestApi: LocationIconService, private mapComp: MapComponent) {}
@@ -24,28 +39,15 @@ export class ShowStationFormComponent implements OnInit, OnChanges {
       this.form.reset();
 
       this.fillForm(this.formItem.station);
+    }else {
+      this.fillForm(this.formItem.station);
     }
 
   }
 
   ngOnInit(): void {
 
-    this.form = new FormGroup({
-      town: new FormControl('', [Validators.required]),
-      work: new FormControl('', Validators.requiredTrue),
-      cabel: new FormGroup({
-        amount: new FormControl(null, Validators.required),
-        busy: new FormControl(null, Validators.required),
-        empty: new FormControl(null, Validators.required),
-        length: new FormControl(null, Validators.required),
-      }),
-      atc: new FormArray([]),
-      location: new FormGroup({
-        lang: new FormControl('', Validators.required),
-        lat: new FormControl('', Validators.required)
-      }),
-      address: new FormControl('', Validators.required)
-    });
+    // this.form =
     this.fillForm(this.formItem.station);
   }
 

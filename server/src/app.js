@@ -3,16 +3,11 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
+const corsOptions = require('./middlewares/corsMiddlewares');
 const { notFound, errorHandler } = require('./middlewares');
 
 const app = express();
 
-const corsOptions = {
-  origin: 'http://localhost:4200',
-  optionsSuccessStatus: 200, // For legacy browser support
-  methods: 'GET, PUT, POST, DELETE',
-};
 app.use(cors(corsOptions));
 
 require('dotenv').config();

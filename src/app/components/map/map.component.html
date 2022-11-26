@@ -2,8 +2,8 @@
 <div class="map-wrapper">
   <div id="map"></div>
   <app-add-form
-  appMapClick
   (onAddFormShow)="showAddFormFunc($event)"
+  (onCreatStation)="addStation($event)"
   *ngIf="showAddForm"
   class="add-form"
   cdkDragBoundary=".map-wrapper"

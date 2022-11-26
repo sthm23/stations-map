@@ -25,6 +25,7 @@ import { MapClickDirective } from './directives/map-click.directive';
 import { ShowStationFormComponent } from './components/show-station-form/show-station-form.component';
 import { AddFormComponent } from './components/add-form/add-form.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FilterComponent } from './components/filter/filter.component';
     ShowStationFormComponent,
     AddFormComponent,
     FilterComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
